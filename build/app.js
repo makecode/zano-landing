@@ -1,6 +1,1 @@
-'use strict';
-
-$(document).ready(function () {
-  var str = 'string';
-  console.log("test template ".concat(str));
-});
+"use strict";$(document).ready(function(){console.log("test template ".concat("string"))});
