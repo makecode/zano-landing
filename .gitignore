@@ -24,7 +24,6 @@
 *.esproj
 *.sublime-project
 *.sublime-workspace
-build
 Thumbs.db
 nbproject
 node_modules
