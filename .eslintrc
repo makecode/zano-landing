@@ -1,0 +1,14 @@
+{
+  "env": {
+    "es6": true,
+    "jquery": true
+  },
+  "extends": "airbnb/legacy",
+  "rules": {
+    "func-names": ["error", "never"],
+    "linebreak-style": 0
+  },
+  "parserOptions": {
+    "sourceType": "module"
+  }
+}

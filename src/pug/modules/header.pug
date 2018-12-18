@@ -1,0 +1,37 @@
+-
+  const headerNav = [
+    { title: 'coinswap',         link: '#' },
+    { title: 'blog',          link: '#' },
+    { title: 'resources',   link: '#' }
+  ]
+
+  const headerSocial = [
+    { title: 'facebook',        link: '#' },
+    { title: 'twitter',         link: '#' },
+    { title: 'linkedin',        link: '#' }
+  ]
+
+// header
+header.header.container
+  div.header__left
+    div.logo
+      img.logo__img(src="assets/logo.svg", alt="Zano logo")
+      span.logo__title zano
+
+  div.header__center
+    nav.navigation
+      each item in headerNav
+        a.navigation__link(href= item.link title= item.title)= item.title
+
+  div.header__right
+    div.language
+      span.language__active Eng
+      ul.language__list
+        li.language__el
+        li.language__el
+
+    ul.social
+      each item in headerSocial
+        li.social__el
+          a.social__link(href= item.link title= item.title)
+            span(class=`icon ${item.title}`)

@@ -1,0 +1,48 @@
+{
+  "name": "zano-landing",
+  "version": "1.0.0",
+  "description": "ZANO | Information site",
+  "author": "Anton Chupak <tony.chupak@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/makecode/zano-landing"
+  },
+  "scripts": {
+    "start": "gulp dev",
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "demo": "yarn static ./build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/register": "^7.0.0",
+    "autoprefixer": "^9.4.2",
+    "browser-sync": "^2.26.3",
+    "cssnano": "^4.1.7",
+    "del": "^3.0.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-changed": "^3.2.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-include": "^2.3.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-stylelint": "^8.0.0",
+    "gulp-stylus": "^2.7.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgmin": "^2.1.0",
+    "gulp-uglify": "^3.0.1",
+    "node-static": "^0.7.11",
+    "normalize.css": "^8.0.1",
+    "stylelint": "^9.9.0",
+    "stylelint-selector-bem-pattern": "^2.0.0"
+  }
+}

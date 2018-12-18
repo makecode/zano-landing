@@ -1,0 +1,38 @@
+-
+  const footerNav = [
+    { title: 'privacy',         link: '#' },
+    { title: 'policy',          link: '#' },
+    { title: 'contact',         link: '#' },
+    { title: 'jobs',            link: '#' },
+    { title: 'partner',         link: '#' },
+    { title: 'program',         link: '#' },
+    { title: 'tell-a-friend',   link: '#' }
+  ]
+
+  const footerSocial = [
+    { title: 'facebook',        link: '#' },
+    { title: 'twitter',         link: '#' },
+    { title: 'linkedin',        link: '#' },
+    { title: 'medium',          link: '#' },
+    { title: 'instagram',       link: '#' },
+    { title: 'youtube',         link: '#' }
+  ]
+
+  const copyright = 'Copyright © 2010-2018, Zano-Optimizer.com. All Rights Reserved. Terms & Conditions.'
+
+// footer
+footer.footer
+  div.logo
+    img.logo__img(src="assets/logo.svg", alt="Zano logo")
+  
+  nav.navigation
+    each item in footerNav
+      a.navigation__link(href= item.link title= item.title)= item.title
+
+  ul.social
+    each item in footerSocial
+      li.social__el
+        a.social__link(href= item.link title= item.title)
+          span(class=`icon ${item.title}`)
+
+  span.footer__copyright=copyright

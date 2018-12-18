@@ -1,0 +1,32 @@
+#Ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.zip
+*.vi
+*~
+
+#Ignore folders and OS files
+.DS_Store
+._*
+.cache
+.project
+.settings
+.tmproj
+.idea
+.sass-cache
+.tmp
+.vscode
+*.esproj
+*.sublime-project
+*.sublime-workspace
+build
+Thumbs.db
+nbproject
+node_modules
+bower_components
+site/lib
