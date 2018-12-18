@@ -1,0 +1,23 @@
+-
+  const privacyItems = [
+    { title: 'Untraceble Transactions',   description: 'It is a mechanism to protect against double spend attackswith the possibility of leasing the power hash of many pure PoW coins became more vulnerable to a 51% attackat one time, pure PoS has its own vulnerabilities such as nothing at stake, stake grinding.' },
+    { title: 'Hidden wallet balance',     description: 'It is a mechanism to protect against double spend attacks with the possibility of leasing the power hash of many at one time, pure PoS has its own vulnerabilities such  as nothing at stake, stake grinding.' }
+  ]
+
+// section privacy
+section.section.privacy
+  div.section__wrap.container
+
+    h2.section__title.title.centred
+      span Privacy 
+      span.title__select Features
+      span.title__shadow Privacy
+
+    div.features
+      each item in privacyItems
+        div.feature
+          h3.feature__title= item.title
+          p.feature__description= item.description
+
+    div.section__icon
+      img(src="assets/icon-privacy.svg", alt="Zano privacy")

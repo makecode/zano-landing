@@ -1,0 +1,47 @@
+-
+  const resourcesItems = [
+    {
+      title: 'Developers',
+      description: 'It is a mechanism to protect  against ',
+      links: [
+        { title: 'github', link: '#' },
+        { title: 'documentation', link: '#' }
+      ]
+    },
+    {
+      title: 'Users',
+      description: 'It is a mechanism to protect  against ',
+      links: [
+        { title: 'account', link: '#' },
+        { title: 'worker', link: '#' }
+      ]
+    },
+    {
+      title: 'Papers',
+      description: 'It is a mechanism to protect  against ',
+      links: [
+        { title: 'file', link: '#' },
+        { title: 'database', link: '#' }
+      ]
+    }
+  ]
+
+// section resources
+section.section.resources
+  div.section__wrap.container
+
+    h2.section__title.title.centred
+      span Resources 
+      span.title__shadow Resources
+
+    div.resources
+      each res in resourcesItems
+        div.resource
+          span(class=`resource__icon ${res.title.toLowerCase()}`)
+          h4.resource__title= res.title
+          p.resource__description= res.description
+
+          div.resource__links
+            each link in res.links
+              a.resource__list(href= link.link title= link.title)
+                span(class=`icon ${link.title}`)

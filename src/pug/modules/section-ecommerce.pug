@@ -1,0 +1,25 @@
+-
+  const ecommerceItems = [
+    { title: 'Purchase API/Web plugins',   description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' },
+    { title: 'Escrow/p2p contracts',   description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' },
+    { title: 'Multisig ',   description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' },
+    { title: 'Aliases',   description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' }
+  ]
+
+// section ecommerce
+section.section.ecommerce
+  div.section__wrap.container
+
+    h2.section__title.title.centred
+      span Ecommerce 
+      span.title__select Platform
+      span.title__shadow Ecommerce
+
+    div.section__icon
+      img(src="assets/icon-ecommerce.svg", alt="Zano privacy")
+
+    div.features
+      each item in ecommerceItems
+        div.feature
+          h3.feature__title= item.title
+          p.feature__description= item.description

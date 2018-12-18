@@ -4,7 +4,7 @@ $footer-bg-bottom = #192859
 body
   display: flex
   flex-direction: column
-  background-color: alpha($bg-one, 0.9)
+  background-color: $blue
   background-image: url('https://i.imgur.com/Jtwy3zn.jpg')
   background-size: cover
 
@@ -14,12 +14,13 @@ footer
   text-align: center
 
 main
-  flex: 1
+  min-height: 100vh
   display: flex
   flex-direction: column
 
 .container
   width 100%
+  width: 1140px
   max-width: 1140px
   margin: 0 auto
 
