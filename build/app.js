@@ -1,1 +1,1 @@
-"use strict";$(document).ready(function(){console.log("test template ".concat("string"))});
+"use strict";$(document).ready(function(){console.log("Hello, i'm ".concat("ZANO!"))});

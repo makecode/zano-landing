@@ -1,8 +1,19 @@
 .section
 
+  &__title
+    margin-bottom: 50px
+
+  &__icon
+    position: relative
+    z-index: 1
+
   &.hero
     text-align: center
 
+    .section__icon
+      margin-top: 100px
+  
+  // SECTION CORE
   &.core
     padding: 100px 0
 
@@ -22,8 +33,21 @@
       left: -100px
 
     .feature
-      margin-top: 50px
+      position: relative
+      margin-top: 100px
 
+    .feature::after
+      pseudo()
+      top: -60px
+      left: 60px
+      transform: translateX(-100%)
+      width: 499px
+      height: 25px
+      background-image: url('assets/icon-dot.png')
+      background-size: cover
+      z-index: 0
+
+  // SECTION PRIVACY
   &.privacy
     padding: 100px 0
 
@@ -35,19 +59,25 @@
     .feature
       width: 40%
 
+  // SECTION ECOMMERCE
   &.ecommerce
+    display: block
     padding: 100px 0
+    text-align: center
 
     .features
+      margin: 100px 0
       display: flex
       flex-direction: row
       justify-content: space-between
       flex-wrap: wrap
+      text-align: left
 
     .feature
       width: 40%
       margin-bottom: 20px
 
+  // SECTION WALLET
   &.wallet
     padding: 100px 0
 
@@ -63,6 +93,10 @@
     .section__right
       width: 60%
 
+    .button
+      margin-top: 50px
+
+  // SECTION RESOURCE
   &.resources
     padding: 100px 0
     text-align: center
