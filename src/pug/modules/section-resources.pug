@@ -4,24 +4,24 @@
       title: 'Developers',
       description: 'It is a mechanism to protect  against ',
       links: [
-        { title: 'github', link: '#' },
-        { title: 'documentation', link: '#' }
+        { icon: 'github', link: '#' },
+        { icon: 'document-box', link: '#' }
       ]
     },
     {
       title: 'Users',
       description: 'It is a mechanism to protect  against ',
       links: [
-        { title: 'account', link: '#' },
-        { title: 'worker', link: '#' }
+        { icon: 'account', link: '#' },
+        { icon: 'worker', link: '#' }
       ]
     },
     {
       title: 'Papers',
       description: 'It is a mechanism to protect  against ',
       links: [
-        { title: 'file', link: '#' },
-        { title: 'database', link: '#' }
+        { icon: 'document', link: '#' },
+        { icon: 'database', link: '#' }
       ]
     }
   ]
@@ -37,11 +37,11 @@ section.section.resources
     div.resources
       each res in resourcesItems
         div.resource
-          span(class=`resource__icon ${res.title.toLowerCase()}`)
+          span(class=`resource__icon icon ${res.title.toLowerCase()}`)
           h4.resource__title= res.title
           p.resource__description= res.description
 
           div.resource__links
             each link in res.links
-              a.resource__list(href= link.link title= link.title)
-                span(class=`icon ${link.title}`)
+              a.resource__link(href= link.link title= link.title)
+                span(class=`icon ${link.icon}`)

@@ -21,6 +21,7 @@
   cursor: pointer
   background-image: linear-gradient(to right, $button-gradient-one, $button-gradient-two)
   box-sizing: border-box
+  position: relative
 
   &__text
     display: inline-flex
@@ -30,13 +31,39 @@
     width: 100%
     height: 100%
     background-color: $button-background
+    position: relative
+    z-index: 1
+    transition: all 0.3s ease-in-out
 
   &.blue
     background-image: linear-gradient(to bottom, $button-gradient-one, $button-gradient-two)
     border: none
-  
+
+  &.blue::after
+    pseudo()
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border-radius: 10px
+    background-image: linear-gradient(to bottom, $button-gradient-two, $button-gradient-one)
+    transition: all 0.3s ease-in-out
+    z-index: 0
+    opacity: 0
+
+  &.blue:hover::after
+    opacity: 1
+
   .icon.download
     margin-right: 8px
 
   .icon.button-triangle
     margin-left: 8px
+
+  span
+      z-index: 1
+
+.button:hover
+
+  .button__text
+    background-color: transparent
