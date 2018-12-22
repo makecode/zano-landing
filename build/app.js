@@ -1,1 +1,1 @@
-"use strict";$(document).ready(function(){console.log("Hello, i'm ".concat("ZANO!"))});
+"use strict";$(document).ready(function(){});

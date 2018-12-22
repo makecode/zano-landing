@@ -8,12 +8,13 @@ import include from 'gulp-include';
 import eslint from 'gulp-eslint';
 import uglify from 'gulp-uglify';
 import plumber from 'gulp-plumber';
+// import browserify from 'browserify';
+// import babelify from 'babelify';
 
 const lint = () => src([path.src.js, './gulp/**/*.js', './*.js'])
   .pipe(eslint())
   .pipe(plumber())
   .pipe(eslint.format())
-  .pipe(eslint.failAfterError())
   .on('error', errorHandler);
 
 const dev = () => src(path.src.js)
