@@ -1,8 +1,8 @@
 -
   const footerNav = [
-    { title: 'coinswap',        link: '#' },
-    { title: 'blog',            link: '#' },
-    { title: 'resources',       link: '#' }
+    { title: 'coinswap',          link: '#', disabled: true },
+    { title: 'blog',              link: '#', },
+    { title: 'resources',         link: '#', }
   ]
 
   const footerSocial = [
@@ -19,7 +19,7 @@ footer.footer
   
   nav.navigation
     each item in footerNav
-      a.navigation__link(href= item.link aria-label= item.title)= item.title
+        a(class=(`navigation__link ${item.disabled ? 'disabled' : ''}`) href= item.link aria-label= item.title)= item.title
 
   ul.social
     each item in footerSocial
