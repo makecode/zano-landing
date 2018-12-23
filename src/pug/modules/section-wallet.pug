@@ -1,5 +1,5 @@
 -
-  const walletDescription = 'It is a mechanism to protect against double spend attacks with the possibility of leasing the power hash of many pure PoW coins became more vulnerable to a 51% attack at one time, pure PoS has its own vulnerabilities such  as nothing at stake, stake grinding.';
+  const walletDescription = 'Testnet';
 
 // section wallet
 section.section.wallet
@@ -12,10 +12,14 @@ section.section.wallet
         span.title__shadow Wallet
       p= walletDescription
 
-      a.button.blue
-        span.icon.download 
-        span MacOS
-        span.icon.button-triangle
+      div.drop-down
+        a.button.blue(href='#')
+          span.icon.download 
+          span MacOS
+          span.icon.button-triangle
+        div.drop-down__menu
+          a.drop-down__item(href='#') Windows
+          a.drop-down__item(href='#') Linux
 
     div.section__right
       div.section__icon

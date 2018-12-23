@@ -1,9 +1,14 @@
-.buttons 
+.buttons
+  display: flex
+  justify-content: center
   margin: 20px 0
 
   .button
-    margin: 0 14px
+    margin-left: 28px
 
+  .button:first-child
+    margin-left: 0
+  
 .button
   padding: 2px
   display: inline-flex
@@ -33,7 +38,7 @@
     background-color: $button-background
     position: relative
     z-index: 1
-    transition: all 0.3s ease-in-out
+    transition: $tr
 
   &.blue
     background-image: linear-gradient(to bottom, $button-gradient-one, $button-gradient-two)
@@ -47,7 +52,7 @@
     height: 100%
     border-radius: 10px
     background-image: linear-gradient(to bottom, $button-gradient-two, $button-gradient-one)
-    transition: all 0.3s ease-in-out
+    transition: $tr
     z-index: 0
     opacity: 0
 

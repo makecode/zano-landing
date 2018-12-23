@@ -1,0 +1,40 @@
+.drop-down
+  display: inline-block
+  position: relative
+  padding-bottom: 10px
+
+  &:hover
+    .drop-down__menu
+      bottom: 0
+      visibility: visible
+      opacity: 1
+
+  &__menu
+    display: block
+    width: 100%
+    height: auto
+    border: 2px solid white
+    position: absolute
+    left: 0
+    bottom: -4px
+    transform: translateY(100%)
+    background-color: $button-background
+    color: white
+    border-color: white
+    border-radius: 10px
+    overflow: hidden
+    box-sizing: border-box
+    visibility: hidden
+    opacity: 0
+    transition: $tr
+    text-align: left
+
+  &__item
+    display: block
+    padding: 10px
+    cursor: pointer
+    color: white
+    transition: $tr
+
+  &__item:hover
+    background-color: $blue

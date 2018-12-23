@@ -6,12 +6,8 @@
   ]
 
   const footerSocial = [
-    { title: 'facebook',        link: '#' },
     { title: 'twitter',         link: '#' },
-    { title: 'linkedin',        link: '#' },
-    { title: 'medium',          link: '#' },
-    { title: 'instagram',       link: '#' },
-    { title: 'youtube',         link: '#' }
+    { title: 'medium',          link: '#' }
   ]
 
   const copyright = 'Copyright © 2019 ZANO.org'
@@ -23,7 +19,7 @@ footer.footer
   
   nav.navigation
     each item in footerNav
-      a.navigation__link(href= item.link title= item.title)= item.title
+      a.navigation__link(href= item.link aria-label= item.title)= item.title
 
   ul.social
     each item in footerSocial
