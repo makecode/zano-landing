@@ -1,50 +1,53 @@
+$drop-down-bg = #19347a
+
 .drop-down
   display: inline-block
   position: relative
-  padding-bottom: 10px
 
   &:hover
     .drop-down__menu
-      bottom: 0
-      visibility: visible
-      opacity: 1
+      display: block
+
+    .button
+      border-radius: 10px 10px 0 0
 
   &__menu
-    display: block
+    display: none
     width: 100%
     height: auto
-    border: 2px solid white
     position: absolute
     left: 0
-    bottom: -4px
+    bottom: 0
     transform: translateY(100%)
-    background-color: $button-background
-    color: white
+    background-color: $drop-down-bg
     border-color: white
-    border-radius: 10px
+    border-radius: 0 0 10px 10px
     overflow: hidden
     box-sizing: border-box
-    visibility: hidden
-    opacity: 0
-    transition: $tr
     text-align: left
 
   &__item
     display: block
-    padding: 10px
+    height: 50px
+    line-height: 50px
     cursor: pointer
-    color: white
     transition: $tr
     font-size: 13px
     font-weight: 700
+    color: $text-main
     text-transform: uppercase
     letter-spacing: 1px
     text-align: center
     box-sizing: border-box
-    border-bottom: 1px solid white
 
   &__item:last-child
     border-bottom: none  
 
   &__item:hover
     background-color: $blue
+    color: white
+
+
+  .button::after
+    border-radius: 10px 10px 0 0
+    transition: none
