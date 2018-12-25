@@ -1,10 +1,4 @@
 -
-  const footerNav = [
-    { title: 'coinswap',          link: '#', disabled: true },
-    { title: 'blog',              link: '#', },
-    { title: 'resources',         link: '#', }
-  ]
-
   const footerSocial = [
     { title: 'twitter',           link: '#' },
     { title: 'medium',            link: '#' },
@@ -17,15 +11,9 @@
 footer.footer
   div.logo
     img.logo__img(src="assets/logo.svg", alt="Zano logo")
-  
-  nav.navigation
-    each item in footerNav
-        a(class=(`navigation__link ${item.disabled ? 'disabled' : ''}`) href= item.link aria-label= item.title)= item.title
 
-  ul.social
-    each item in footerSocial
-      li.social__el
-        a.social__link(href= item.link title= item.title)
-          span(class=`icon ${item.title}`)
+  include navigation
+
+  include social
 
   span.footer__copyright=copyright

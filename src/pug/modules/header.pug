@@ -1,10 +1,4 @@
 -
-  const headerNav = [
-    { title: 'coinswap',          link: '#', disabled: true },
-    { title: 'blog',              link: '#', },
-    { title: 'resources',         link: '#', }
-  ]
-
   const headerSocial = [
     { title: 'twitter',           link: '#' },
     { title: 'medium',            link: '#' },
@@ -19,9 +13,7 @@ header.header.container
       span.logo__title zano
 
   div.header__center
-    nav.navigation
-      each item in headerNav
-        a(class=(`navigation__link ${item.disabled ? 'disabled' : ''}`) href= item.link aria-label= item.title)= item.title
+    include navigation
 
   div.header__right
     div.language
@@ -30,8 +22,4 @@ header.header.container
         li.language__el
         li.language__el
 
-    ul.social
-      each item in headerSocial
-        li.social__el
-          a.social__link(href= item.link title= item.title)
-            span(class=`icon ${item.title}`)
+    include social
