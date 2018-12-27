@@ -3,12 +3,22 @@
   justify-content: center
   margin: 20px 0
 
+  +m($mobile)
+    display: inline-flex
+    flex-direction: column-reverse
+
   .button
     margin-left: 28px
+
+    +m($mobile)
+      margin: 0 0 20px 0
 
   .button:first-child
     margin-left: 0
   
+    +m($mobile)
+      margin: 0
+
 .button
   padding: 2px
   display: inline-flex

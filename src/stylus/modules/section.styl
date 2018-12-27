@@ -1,4 +1,8 @@
 .section
+  padding: 100px 0
+
+  +m($tablet)
+    padding: 40px 0
 
   &__title
     margin-bottom: 50px
@@ -9,25 +13,41 @@
 
   // HERO
   &.hero
+    padding: 0 0 100px
     text-align: center
+
+    +m($mobile)
+      padding: 0 0 20px
 
     .section__icon
       margin-top: 100px
 
+      +m($mobile)
+        margin-top: 30px
+
   // SECTION CORE
   &.core
-    padding: 100px 0
 
     .section__wrap
       display: flex
       flex-direction: row
       justify-content: space-between
 
+      +m($tablet)
+        flex-direction: column
+        justify-content: center
+
     .section__left
       width: 60%
 
+      +m($tablet)
+        display: none
+
     .section__right
       width: 40%
+      
+      +m($tablet)
+        width: 100%
 
     .section__icon
       position: relative
@@ -36,6 +56,9 @@
     .feature
       position: relative
       margin-top: 100px
+
+      +m($tablet)
+        margin-top: 40px
 
     .feature::after
       pseudo()
@@ -48,22 +71,29 @@
       background-size: cover
       z-index: 0
 
+      +m($tablet)
+        display: none
+
   // SECTION PRIVACY
   &.privacy
-    padding: 100px 0
 
     .features
       display: flex
       flex-direction: row
       justify-content: space-between
 
+      +m($mobile)
+        flex-direction: column
+
     .feature
       width: 40%
+
+      +m($mobile)
+        width: 100%
 
   // SECTION ECOMMERCE
   &.ecommerce
     display: block
-    padding: 100px 0
     text-align: center
 
     .features
@@ -74,30 +104,43 @@
       flex-wrap: wrap
       text-align: left
 
+      +m($mobile)
+        flex-direction: column
+
     .feature
       width: 40%
       margin-bottom: 20px
 
+      +m($mobile)
+        width: 100%
+
   // SECTION WALLET
   &.wallet
-    padding: 100px 0
 
     .section__wrap
       display: flex
       flex-direction: row
       justify-content: space-between
       align-items: center
+      
+      +m($mobile)
+        flex-direction: column-reverse
 
     .section__left
       width: 40%
+    
+      +m($mobile)
+        width: 100%
 
     .section__right
-      width: 60%
+      width: 60% 
+    
+      +m($mobile)
+        width: 80%
 
     .button
       margin-top: 50px
 
   // SECTION RESOURCE
   &.resources
-    padding: 100px 0
     text-align: center

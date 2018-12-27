@@ -4,24 +4,24 @@
       title: 'Developers',
       description: 'Sources and documentation',
       links: [
-        { icon: 'github', link: 'https://github.com/zano-project/zano' },
-        { icon: 'document-box', link: 'https://docs.zano.org/' }
+        { icon: 'github', link: 'https://github.com/zano-project/zano', description: 'Github' },
+        { icon: 'document-box', link: 'https://docs.zano.org/', description: 'Documentation' }
       ]
     },
     {
       title: 'Users',
       description: 'Manuals and guides',
       links: [
-        { icon: 'account', link: 'https://docs.zano.org/' },
-        { icon: 'worker', link: 'https://docs.zano.org/' }
+        { icon: 'account', link: 'https://docs.zano.org/', description: 'User guide' },
+        { icon: 'worker', link: 'https://docs.zano.org/', description: 'Miner guide' }
       ]
     },
     {
       title: 'Papers',
       description: 'Whitepapers and specifications',
       links: [
-        { icon: 'document', link: 'downloads/zano_wp.pdf' },
-        { icon: 'database', link: '#' }
+        { icon: 'document', link: 'downloads/zano_wp.pdf', description: 'Whitepaper' },
+        { icon: 'database', link: '#', description: 'Specifications' }
       ]
     }
   ]
@@ -43,5 +43,6 @@ section.section.resources
 
           div.resource__links
             each link in res.links
-              a.resource__link(href= link.link title= link.title)
+              a.resource__link(href= link.link aria-label= link.title)
                 span(class=`icon ${link.icon}`)
+                span.resource__tooltip= link.description

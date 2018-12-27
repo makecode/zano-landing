@@ -7,16 +7,39 @@ $resource-gradient-bottom = #16224b
   flex-direction: row
   justify-content: space-between
 
+  +m($laptop)
+    justify-content: space-around
+
+  +m($mobile)
+    margin: 20px 0
+    flex-direction: column
+    justify-content: center
+
 .resource
-  padding: 40px 0
+  padding: 40px 16px
   width: 340px
-  height: 330px
+  min-height: 330px
   display: inline-flex
   flex-direction: column
   align-items: center
   border-radius: 14px
   background: linear-gradient(to bottom, $resource-gradient-top, $resource-gradient-bottom)
   box-sizing: border-box
+
+  +m($laptop)
+    width: 300px
+
+  +m($tablet)
+    width: 220px
+
+  +m($mobile)
+    padding: 16px
+    width: 100%
+    min-height: 250px
+    margin-bottom: 20px
+
+    &:last-child
+      margin-bottom: 0
 
   &__title
     margin: 20px 0 0
@@ -34,9 +57,41 @@ $resource-gradient-bottom = #16224b
     flex-direction: row
     justify-content: center
 
-  &__link
-    margin: 0 10px
+  &__tooltip
+    position: absolute
+    bottom: calc(-100% - 8px)
+    right: 0
+    display: inline-block
+    padding: 0 16px
+    height: 46px
+    background-color: $bg-tooltip
+    border-radius: 10px
+    line-height: 46px
+    font-size: 13px
+    font-weight: 700
+    letter-spacing: 1px
+    white-space: nowrap
+    color: white
+    visibility: hidden
+    opacity: 0
     transition: $tr
 
+    &::after
+      pseudo()
+      top: -8px
+      right: 14px
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 8px 8px 8px;
+      border-color: transparent transparent $bg-tooltip transparent;
+
+  &__link
+    position: relative
+    margin: 0 10px
+
   &__link:hover
-    transform: rotate(-15deg)
+
+    .resource__tooltip
+      opacity: 1
+      visibility: visible
