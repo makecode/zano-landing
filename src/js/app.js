@@ -1,9 +1,11 @@
 'use strict';
 
 $(document).ready(function () {
-  // const $dropDownButtons = $('.drop-down__toggle');
+  const $hamburger = $('#hamburger');
+  const $mobileMenu = $('#mobile-menu');
 
-  // $dropDownButtons.map((index, btn) => {
-  //   $(btn).click(() => $(btn).next().toggleClass('show'));
-  // });
+  $($hamburger).click(function () {
+    $($hamburger).toggleClass('active');
+    $($mobileMenu).toggleClass('opened');
+  });
 });
