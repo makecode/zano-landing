@@ -9,12 +9,12 @@
   box-shadow: inset 0px 0px 500px 0px rgba(0,0,0,0.75)
   z-index: $z-mobile-menu
   transition: $tr-mobile-menu
-  // transform: translateX(-100%)
   opacity: 0
+  visibility: hidden
 
   &.opened
-    // transform: translateX(0%)
     opacity: 1
+    visibility: visible
 
   .navigation
     position: absolute
