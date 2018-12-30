@@ -14,6 +14,9 @@ main
   display: flex
   flex-direction: column
 
+  +m($tablet)
+    padding-top: 70px
+
 .container
   padding: 0 20px
   width 100%
@@ -36,8 +39,15 @@ main
   align-items: center
 
   +m($tablet)
-    padding: 20px
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    padding: 10px 20px
     justify-content: center
+    background-color: rgba($bg-body, 0.9)
+    box-shadow: 10px 0px 50px 0px rgba(0,0,0,0.75)
+    z-index: $z-header
 
   &__center
     position: absolute
