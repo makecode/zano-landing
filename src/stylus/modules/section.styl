@@ -8,7 +8,9 @@
     margin-bottom: 50px
 
   &__icon
+    display: inline-block
     position: relative
+    max-width: 800px
     z-index: 1
 
   // HERO
@@ -45,7 +47,7 @@
 
     .section__right
       width: 40%
-      
+
       +m($tablet)
         width: 100%
 
@@ -67,7 +69,7 @@
       transform: translateX(-100%)
       width: 499px
       height: 25px
-      background-image: url('assets/icon-dot.png')
+      background-image: url('assets/icon-dot.svg')
       background-size: cover
       z-index: 0
 
@@ -76,11 +78,17 @@
 
   // SECTION PRIVACY
   &.privacy
+    text-align: center
+
+    .section__title
+      display: block
+      text-align: left
 
     .features
       display: flex
       flex-direction: row
       justify-content: space-between
+      text-align: left
 
       +m($mobile)
         flex-direction: column
@@ -124,19 +132,19 @@
       flex-direction: row
       justify-content: space-between
       align-items: center
-      
+
       +m($mobile)
         flex-direction: column-reverse
 
     .section__left
       width: 40%
-    
+
       +m($mobile)
         width: 100%
 
     .section__right
-      width: 60% 
-    
+      width: 60%
+
       +m($mobile)
         width: 80%
 
