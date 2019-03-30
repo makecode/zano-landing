@@ -15,7 +15,7 @@
 
   // HERO
   &.hero
-    padding: 0 0 100px
+    padding: 0
     text-align: center
 
     +m($mobile)
@@ -23,12 +23,14 @@
 
     .section__icon
       margin-top: 100px
+      opacity: 0
 
       +m($mobile)
         margin-top: 30px
 
   // SECTION CORE
   &.core
+    padding-top: 0
 
     .section__wrap
       display: flex
@@ -67,7 +69,7 @@
       top: -60px
       left: 60px
       transform: translateX(-100%)
-      width: 499px
+      width: 500px
       height: 25px
       background-image: url('assets/icon-dot.svg')
       background-size: cover
@@ -99,10 +101,17 @@
       +m($mobile)
         width: 100%
 
+  // SECTION HERO
+  &.hero
+  .section__icon
+    display: block
+    margin: 0 auto
+
   // SECTION ECOMMERCE
   &.ecommerce
     display: block
     text-align: center
+    padding-bottom: 0
 
     .features
       margin-top: 100px
@@ -124,6 +133,8 @@
 
   // SECTION WALLET
   &.wallet
+    padding-bottom: 0
+
     .title
       white-space: nowrap
 
@@ -147,6 +158,9 @@
 
       +m($mobile)
         width: 80%
+
+    .section__icon
+      max-width: 450px
 
     .drop-down
       margin-top: 50px
