@@ -44,7 +44,6 @@ const sceneCore = new ScrollMagic.Scene({
   reverse: false
 })
 .setTween(tlCore)
-.addIndicators()
 .addTo(controller);
 
 
@@ -74,7 +73,6 @@ const scenePrivacy = new ScrollMagic.Scene({
   reverse: false
 })
 .setTween(tlPrivacy)
-.addIndicators()
 .addTo(controller);
 
 
@@ -104,7 +102,6 @@ const sceneEcommerce = new ScrollMagic.Scene({
   reverse: false
 })
 .setTween(tlEcommerce)
-.addIndicators()
 .addTo(controller);
 
 
@@ -136,7 +133,6 @@ const sceneWallet = new ScrollMagic.Scene({
   reverse: false
 })
 .setTween(tlWallet)
-.addIndicators()
 .addTo(controller);
 
 
@@ -167,7 +163,6 @@ const sceneRescources = new ScrollMagic.Scene({
   reverse: false
 })
 .setTween(tlRescources)
-.addIndicators()
 .addTo(controller);
 
 

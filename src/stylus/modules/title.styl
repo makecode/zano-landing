@@ -1,8 +1,16 @@
+$shadowColor = #2a3676
+
 .title
   position: relative
 
-  &__select    
+  &__text
+    position: relative
+    z-index: 2
+
+  &__text-select
+    position: relative  
     color: $blue
+    z-index: 2
   
   &__shadow
     position: absolute
@@ -10,7 +18,9 @@
     left: 0
     font-size: 144px
     font-weight: 900
-    opacity: 0.03
+    opacity: 0.4
+    color: $shadowColor
+    z-index: 1
 
     +m($tablet)
       font-size: 100px
