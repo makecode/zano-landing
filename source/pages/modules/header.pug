@@ -1,0 +1,26 @@
+-
+  const headerSocial = [
+    { title: 'twitter',           link: '#' },
+    { title: 'medium',            link: '#' },
+    { title: 'slack',             link: '#' }
+  ]
+
+// header
+header.header.container
+  div.header__left
+    div.logo
+      img.logo__img(src=require('./../../media/logo.svg'), alt="Zano logo")
+      span.logo__title zano
+
+  div.header__center
+    include navigation
+
+  div.header__right
+    //- include language
+
+    include social
+
+  div.hamburger#hamburger
+    span.hamburger__line
+    span.hamburger__line
+    span.hamburger__line

@@ -1,0 +1,11 @@
+{
+    "name": "ZANO LP",
+    "short_name": "ZANO LP",
+    "description": "ZANO Cryptocurrency",
+    "icons": [
+        {
+            "src": "favicon.ico",
+            "sizes": "16x16 32x32 96x96"
+        }
+    ]
+}

@@ -1,0 +1,171 @@
+.section
+  padding: 100px 0
+
+  +m($tablet)
+    padding: 40px 0
+
+  &__title
+    margin-bottom: 50px
+
+  &__icon
+    display: inline-block
+    position: relative
+    max-width: 800px
+    z-index: 1
+
+  // HERO
+  &.hero
+    padding: 0
+    text-align: center
+
+    +m($mobile)
+      padding: 0 0 20px
+
+    .section__icon
+      margin-top: 100px
+      opacity: 0
+
+      +m($mobile)
+        margin-top: 30px
+
+  // SECTION CORE
+  &.core
+    padding-top: 0
+
+    .section__wrap
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+
+      +m($tablet)
+        flex-direction: column
+        justify-content: center
+
+    .section__left
+      width: 60%
+
+      +m($tablet)
+        display: none
+
+    .section__right
+      width: 40%
+
+      +m($tablet)
+        width: 100%
+
+    .section__icon
+      position: relative
+      left: -100px
+
+    .feature
+      position: relative
+      margin-top: 100px
+
+      +m($tablet)
+        margin-top: 40px
+
+    .feature::after
+      position: absolute
+      content: ''
+      top: -60px
+      left: 60px
+      transform: translateX(-100%)
+      width: 500px
+      height: 25px
+      background-image: url('~media/icon-dot.svg')
+      background-size: cover
+      z-index: 0
+
+      +m($tablet)
+        display: none
+
+  // SECTION PRIVACY
+  &.privacy
+    text-align: center
+
+    .section__title
+      display: block
+      text-align: left
+
+    .features
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      text-align: left
+
+      +m($mobile)
+        flex-direction: column
+
+    .feature
+      width: 40%
+
+      +m($mobile)
+        width: 100%
+
+  // SECTION HERO
+  &.hero
+  .section__icon
+    display: block
+    margin: 0 auto
+
+  // SECTION ECOMMERCE
+  &.ecommerce
+    display: block
+    text-align: center
+    padding-bottom: 0
+
+    .features
+      margin-top: 100px
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      flex-wrap: wrap
+      text-align: left
+
+      +m($mobile)
+        flex-direction: column
+
+    .feature
+      width: 40%
+      margin-bottom: 20px
+
+      +m($mobile)
+        width: 100%
+
+  // SECTION WALLET
+  &.wallet
+    padding-bottom: 0
+
+    .title
+      white-space: nowrap
+
+    .section__wrap
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+
+      +m($mobile)
+        flex-direction: column-reverse
+
+    .section__left
+      width: 40%
+
+      +m($mobile)
+        width: 100%
+
+    .section__right
+      width: 60%
+
+      +m($mobile)
+        width: 80%
+
+    .section__icon
+      max-width: 450px
+
+    .drop-down
+      margin-top: 50px
+
+  // SECTION RESOURCE
+  &.resources
+    text-align: center

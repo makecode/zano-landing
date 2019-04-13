@@ -1,0 +1,42 @@
+.navigation
+
+  &__link
+    position: relative
+    margin-right: 28px
+    color: $text-controls
+    font-size: 13px
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 1px
+
+  &__link:last-child
+    margin-right: 0
+
+  &__link:after,
+  &__link:before
+    position: absolute
+    content: ''
+    left: 50%
+    transform: translateX(-50%)
+    height: 2px
+    width: 0
+    transition: $tr
+    background-image: linear-gradient(to right, #359ef6, #025cdd)
+
+  &__link:after
+    bottom: -6px
+
+  &__link:before
+    opacity: 0.4
+    bottom: -8px
+
+  &__link:hover::after
+    width: 100%
+
+  &__link:hover::before
+    width: 80%
+
+  &__link.disabled
+    opacity: 0.2
+    pointer-events: none
+    user-select: none

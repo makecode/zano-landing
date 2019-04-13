@@ -1,0 +1,58 @@
+$drop-down-bg: #19347a
+
+.drop-down
+  display: inline-block
+  position: relative
+
+  &:hover
+    .drop-down__menu
+      display: block
+
+    .button
+      border-radius: 10px 10px 0 0
+
+  &__menu
+    display: none
+    width: 100%
+    height: auto
+    position: absolute
+    left: 0
+    bottom: 0
+    transform: translateY(100%)
+    background-color: $drop-down-bg
+    border-color: white
+    border-radius: 0 0 10px 10px
+    overflow: hidden
+    box-sizing: border-box
+    text-align: left
+
+  &__item
+    display: block
+    height: 50px
+    line-height: 50px
+    cursor: pointer
+    transition: $tr
+    font-size: 13px
+    font-weight: 700
+    color: $text-main
+    text-transform: uppercase
+    letter-spacing: 1px
+    text-align: center
+    box-sizing: border-box
+
+  &__item:last-child
+    border-bottom: none
+
+  &__item:hover
+    background-color: $blue
+    color: white
+
+
+  .button::after
+    border-radius: 10px 10px 0 0
+    transition: none
+
+  &.disabled
+    opacity: 0.2
+    pointer-events: none
+    user-select: none

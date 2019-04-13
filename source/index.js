@@ -1,0 +1,209 @@
+import 'ress';
+import './styles/_index.sass';
+
+// import libs
+// import { TweenMax, TimelineMax } from 'gsap';
+// import ScrollMagic from 'scrollmagic';
+// import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
+// import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
+
+// init ScrollMagic
+const controller = new ScrollMagic.Controller();
+
+// section HERO animation
+// prepare positions of elements
+const iconHeroItems = `
+  #icon-hero .shield,
+  #icon-hero .wall-left,
+  #icon-hero .wall-right,
+
+  #icon-hero .wallet-gradient,
+  #icon-hero .wallet-bg,
+
+  #icon-hero .atom-gradient,
+  #icon-hero .atom-bg`;
+
+TweenMax.set('#icon-hero .st70', { x: 32, y: -32 });
+TweenMax.set('#icon-hero .st68', { x: -32, y: -32 });
+TweenMax.set('#icon-hero .shield', { y: 160, opacity: 0 });
+TweenMax.set('#icon-hero .wall-left, #icon-hero .wall-right', { y: 140, opacity: 0 });
+TweenMax.set('#icon-hero .wallet, #icon-hero .wallet-gradient, #icon-hero .wallet-bg', { y: 160, opacity: 0 });
+TweenMax.set('#icon-hero .atom, #icon-hero .atom-gradient, #icon-hero .atom-bg', { y: 160, opacity: 0 });
+
+const tlHero = new TimelineMax();
+tlHero
+  .to('.section.hero .section__icon', 2, { autoAlpha: 1 }, '+=0.5')
+  .to('#icon-hero .st70, #icon-hero .st68', 2, { x: 0, y: 0 }, '-=1')
+  .to(iconHeroItems, 2, { y: 0, opacity: 1 }, '-=1');
+
+
+// -----------------------------------------------------------------------
+
+
+// section CORE
+// prepare positions of elements
+TweenMax.set('.section.core .section__wrap', { y: 200, autoAlpha: 0, transformOrigin: 'center' });
+TweenMax.set('#icon-core #_x31_7', { y: 160, scale: 0.7, autoAlpha: 0, transformOrigin: 'center' });
+TweenMax.set('#icon-core #_x31_3', { y: 160, scale: 0.7, autoAlpha: 0, transformOrigin: 'center' });
+TweenMax.set('#icon-core #_x33__1_', { y: 160, scale: 0.7, autoAlpha: 0, transformOrigin: 'center' });
+TweenMax.set('#icon-core #_x34_6', { autoAlpha: 0, scale: 0.5, transformOrigin: 'center' });
+TweenMax.set('#icon-core #_x34_0', { autoAlpha: 0, scale: 0.5, transformOrigin: 'center' });
+TweenMax.set('#icon-core #_x33_4', { autoAlpha: 0, scale: 0.5, transformOrigin: 'center' });
+
+const tlCore = new TimelineMax();
+const tlCoreSection = new TimelineMax();
+const tlCoreIcon = new TimelineMax();
+
+tlCoreSection
+  .to('.section.core .section__wrap', 2, { y: 0, autoAlpha: 1 });
+
+tlCoreIcon
+  .to('#icon-core #_x31_7, #icon-core #_x31_3, #icon-core #_x33__1_', 3, { y: 0, autoAlpha: 1, scale: 1 })
+  .to('#icon-core #_x34_6, #icon-core #_x34_0, #icon-core #_x33_4', 3, { autoAlpha: 1, scale: 1 }, '-=2');
+
+tlCore
+  .add([tlCoreSection, tlCoreIcon]);
+
+const sceneCore = new ScrollMagic.Scene({
+  triggerElement: '.section.core',
+  reverse: false
+})
+  .setTween(tlCore)
+  .addTo(controller);
+
+
+// -----------------------------------------------------------------------
+
+
+// section PRIVACY
+// prepare positions of elements
+TweenMax.set('.section.privacy .section__wrap', { y: 400, autoAlpha: 0 });
+TweenMax.set('.section.privacy .section__icon', { scale: 0.4, autoAlpha: 0 });
+
+const privacyItems1 = '#icon-privacy #_x34_03, #icon-privacy #_x33_98, #icon-privacy #_x33_93, #icon-privacy #_x33_88, #icon-privacy #_x33_83';
+TweenMax.set(privacyItems1, { scale: 0, transformOrigin: 'center' });
+
+const tlPrivacy = new TimelineMax();
+const tlPrivacyText = new TimelineMax();
+const tlPrivacyIcon = new TimelineMax();
+
+tlPrivacyText
+  .to('.section.privacy .section__wrap', 2, { y: 0, autoAlpha: 1 });
+
+tlPrivacyIcon
+  .to('.section.privacy .section__icon', 2, { scale: 1, autoAlpha: 1})
+  .to(privacyItems1, 2, { scale: 1});
+
+tlPrivacy
+  .add([tlPrivacyText, tlPrivacyIcon]);
+
+const scenePrivacy = new ScrollMagic.Scene({
+  triggerElement: '.section.privacy',
+  reverse: false
+})
+  .setTween(tlPrivacy)
+  .addTo(controller);
+
+
+// -----------------------------------------------------------------------
+
+
+// section E-COMMERCE animation
+// prepare positions of elements
+TweenMax.set('.section.ecommerce .features', { y: 200, autoAlpha: 0 });
+TweenMax.set('.section.ecommerce .section__icon', { scale: 0.4, autoAlpha: 0 });
+
+const tlEcommerce = new TimelineMax();
+const tlEcommerceText = new TimelineMax();
+const tlEcommerceIcon = new TimelineMax();
+
+tlEcommerceIcon
+  .to('.section.ecommerce .section__icon', 3, { scale: 1, autoAlpha: 1 })
+
+tlEcommerceText
+  .to('.section.ecommerce .features', 3, { y: 0, autoAlpha: 1 });
+
+tlEcommerce
+  .add([tlEcommerceText, tlEcommerceIcon]);
+
+const sceneEcommerce = new ScrollMagic.Scene({
+  triggerElement: '.section.ecommerce',
+  reverse: false
+})
+  .setTween(tlEcommerce)
+  .addTo(controller);
+
+
+// -----------------------------------------------------------------------
+
+
+// section WALLET animation
+// prepare positions of elements
+TweenMax.set('.section.wallet .section__left', { autoAlpha: 0 });
+TweenMax.set('#icon-wallet .display-data', { x: 113, y: 126 });
+TweenMax.set('#icon-wallet .display-shadow-one', { x: 74, y: 74 });
+TweenMax.set('#icon-wallet .display-shadow-two', { x: 36, y: 36 });
+
+const tlWallet = new TimelineMax();
+const tlWalletText = new TimelineMax();
+const tlWalletIcon = new TimelineMax();
+
+tlWalletText
+  .to('.section.wallet .section__left', 2, { autoAlpha: 1 });
+
+tlWalletIcon
+  .to('#icon-wallet .display-data, #icon-wallet .display-shadow-one, #icon-wallet .display-shadow-two', 2, { x: 0, y: 0 });
+
+tlWallet
+  .add([tlWalletIcon, tlWalletText]);
+
+const sceneWallet = new ScrollMagic.Scene({
+  triggerElement: '.section.wallet',
+  reverse: false
+})
+  .setTween(tlWallet)
+  .addTo(controller);
+
+
+// -----------------------------------------------------------------------
+
+
+// section RESCOURCES animation
+// prepare positions of elements
+TweenMax.set('.section.resources .section__title', { y: -100, autoAlpha: '0.3' });
+TweenMax.set('.section.resources .resources', { y: -230, autoAlpha: '0' });
+
+const tlRescources = new TimelineMax();
+const tlRescourcesTitle = new TimelineMax();
+const tlRescourcesItems = new TimelineMax();
+
+tlRescourcesTitle
+  .to('.section.resources .section__title', 2, { y: 0, autoAlpha: '1' });
+
+tlRescourcesItems
+  .to('.section.resources .resources', 2, { y: 0, autoAlpha: '1' });
+
+tlRescources
+  .add([tlRescourcesTitle, tlRescourcesItems]);
+
+const sceneRescources = new ScrollMagic.Scene({
+  triggerElement: '.section.resources',
+  duration: '100%',
+  reverse: false
+})
+  .setTween(tlRescources)
+  .addTo(controller);
+
+
+// -----------------------------------------------------------------------
+
+
+$(document).ready(function () {
+  const $hamburger = $('#hamburger');
+  const $mobileMenu = $('#mobile-menu');
+
+  $($hamburger).click(function () {
+    $($hamburger).toggleClass('active');
+    $($mobileMenu).toggleClass('opened');
+  });
+});
