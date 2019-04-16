@@ -8,8 +8,9 @@
     margin-bottom: 50px
 
   &__icon
-    display: inline-block
     position: relative
+    display: block
+    margin: 0 auto
     max-width: 800px
     z-index: 1
 
@@ -17,6 +18,9 @@
   &.hero
     padding: 0
     text-align: center
+    background-image: url('~media/bg-1.svg')
+    background-position: center bottom
+    background-size: cover
 
     +m($mobile)
       padding: 0 0 20px
@@ -31,6 +35,8 @@
   // SECTION CORE
   &.core
     padding-top: 0
+    background-image: url('~media/bg-2.svg')
+    background-position: left center
 
     .section__wrap
       display: flex
@@ -85,6 +91,9 @@
   // SECTION PRIVACY
   &.privacy
     text-align: center
+    background-image: url('~media/bg-3.svg')
+    background-size: cover
+    background-position: center bottom
 
     .section__title
       display: block
@@ -105,17 +114,13 @@
       +m($mobile)
         width: 100%
 
-  // SECTION HERO
-  &.hero
-  .section__icon
-    display: block
-    margin: 0 auto
-
   // SECTION ECOMMERCE
   &.ecommerce
     display: block
     text-align: center
     padding-bottom: 0
+    background-image: url('~media/bg-4.svg')
+    background-size: cover
 
     .features
       margin-top: 100px
@@ -137,7 +142,10 @@
 
   // SECTION WALLET
   &.wallet
+
     padding-bottom: 0
+    background-image: url('~media/bg-5.svg')
+    background-size: cover
 
     .title
       white-space: nowrap
@@ -171,4 +179,7 @@
 
   // SECTION RESOURCE
   &.resources
+    background-image: url('~media/bg-6.svg')
+    background-size: cover
+    background-position: center center
     text-align: center
