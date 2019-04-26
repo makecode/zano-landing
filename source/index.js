@@ -17,15 +17,16 @@ const iconHeroItems = `
   #icon-hero .wall-left,
   #icon-hero .wall-right,
 
-  #icon-hero .wallet-gradient,
+  #icon-hero .wallet,
   #icon-hero .wallet-bg,
 
-  #icon-hero .atom-gradient,
+  #icon-hero .atom,
   #icon-hero .atom-bg`;
 
 TweenMax.set('#icon-hero .st70', { x: 32, y: -32 });
 TweenMax.set('#icon-hero .st68', { x: -32, y: -32 });
 TweenMax.set('#icon-hero .shield', { y: 160, opacity: 0 });
+TweenMax.set('#icon-hero .atom-gradient, #icon-hero .wallet', { opacity: 0 });
 TweenMax.set('#icon-hero .wall-left, #icon-hero .wall-right', { y: 140, opacity: 0 });
 TweenMax.set('#icon-hero .wallet, #icon-hero .wallet-gradient, #icon-hero .wallet-bg', { y: 160, opacity: 0 });
 TweenMax.set('#icon-hero .atom, #icon-hero .atom-gradient, #icon-hero .atom-bg', { y: 160, opacity: 0 });
