@@ -1,0 +1,96 @@
+$borderDefault: #323487
+$progress: #20938a
+$planned: #323a6d
+$completed: #1565c0
+
+.events
+  margin: 50px 0
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: flex-start
+
+.event
+  margin-right: 4.99%
+  margin-bottom: 60px
+  text-align: left
+  display: inline-block
+  width: 30%
+
+  &__tag
+    margin-right: 10px
+    display: inline-block
+    height: 22px
+    line-height: 20px
+    padding: 0 16px
+    border: 2px solid $borderDefault
+    border-radius: 10px
+    color: white
+    font-size: 10px
+    font-weight: 700
+    text-transform: uppercase
+
+  &__tag:last-child
+    margin-right: 0
+
+  &__tag.progress
+    background-color: $progress
+    border-color: $progress
+
+  &__tag.planned
+    background-color: $planned
+    border-color: $planned
+
+  &__tag.completed
+    background-color: $completed
+    border-color: $completed
+
+
+  &__title
+    position: relative
+    display: inline-block
+    margin: 18px 0
+    font-size: 18px
+    font-weight: 700
+    color: white
+    //cursor: pointer
+
+  //&__title::after
+  //  position: absolute
+  //  content: ''
+  //  left: 0
+  //  bottom: -6px
+  //  width: 0
+  //  height: 2px
+  //  background-color: #1796ff
+  //  transition: $tr
+
+  //&__title:hover::after
+  //  width: 100%
+
+  &__description
+    margin: 0
+    font-size: 14px
+    line-height: 1.6
+
+  &__estimate
+    margin-top: 10px
+    display: flex
+    align-items: center
+    color: #4e578a
+
+    .icon
+      position: relative
+      top: -1px
+      margin-right: 10px
+
+  a
+    font-weight: 700
+    color: white
+    transition: $tr
+
+  a:hover
+    text-decoration: underline
+
+.event:nth-child(3n)
+  margin-right: 0

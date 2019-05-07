@@ -1,5 +1,6 @@
 import 'ress';
 import './styles/_index.sass';
+// import $ from 'filterizr';
 
 // import libs
 // import { TweenMax, TimelineMax } from 'gsap';
@@ -233,4 +234,6 @@ $(document).ready(function () {
     $($hamburger).toggleClass('active');
     $($mobileMenu).toggleClass('opened');
   });
+
+  // $('.filtr-container').filterizr();
 });

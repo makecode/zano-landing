@@ -42,6 +42,11 @@ const common = merge([
         chunks: ['index', 'common'],
         template: PATH.source + '/pages/pages/index.pug'
       }),
+      new HtmlWebpackPlugin({
+        filename: 'roadmap.html',
+        chunks: ['index', 'common'],
+        template: PATH.source + '/pages/pages/roadmap.pug'
+      }),
       // new CopyWebpackPlugin([{
       // from: './locales/**/*',
       // to: './js/'
@@ -49,9 +54,10 @@ const common = merge([
       new webpack.optimize.CommonsChunkPlugin({
         name: 'common'
       }),
-      new webpack.ProvidePlugin({
-        $: 'jquery'
-      })
+      // new webpack.ProvidePlugin({
+      //   $: 'jquery',
+      //   jQuery: 'jquery'
+      // })
     ]
   },
   js(),

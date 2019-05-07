@@ -1,0 +1,136 @@
+// section roadmap
+section.section.roadmap
+  div.section__wrap.container
+
+    h2.section__title.title.centred
+      span.title__text Zano
+      span.title__text-select Roadmap
+      span.title__shadow Roadmap
+
+    div.roadmap-nav
+
+      div.search
+        span.search__icon
+        input.search__input(type='search' placeholder='Search')
+
+      ul.roadmap-menu
+          li.roadmap-menu__el(data-filter='all') all
+          li.roadmap-menu__el(data-filter='progress') in progress
+          li.roadmap-menu__el(data-filter='planned') planned
+          li.roadmap-menu__el(data-filter='completed') completed
+          li.roadmap-menu__el(data-filter='development') development
+          li.roadmap-menu__el(data-filter='r&d') r&d
+
+    div.events.filtr-container
+
+      div.event.filtr-item(data-category='development')
+        div.event__tags
+          span.event__tag.progress in progress
+          span.event__tag development
+        span.event__title Light wallet
+        p.event__description A light version of the Zano wallet app that doesn’t require blockchain data to be stored on a local hard drive.
+        //div.event__estimate
+          span.icon.clock
+          span Estimate Q2 2019
+
+      div.event.filtr-item(data-category='all, progress, development')
+        div.event__tags
+          span.event__tag.progress in progress
+          span.event__tag development
+        span.event__title Marketplace
+        p.event__description A Decentralized Anonymous Marketplace built on top of the Zano blockchain.
+        //div.event__estimate
+          span.icon.clock
+          span Estimate Q2 2019
+
+      div.event.filtr-item(data-category='all, planned, development')
+        div.event__tags
+          span.event__tag.planned planned
+          span.event__tag development
+        span.event__title Mobile wallet
+        p.event__description Native iOS & Android wallet apps.
+        //div.event__estimate
+          span.icon.clock
+          span Estimate Q2 2019
+
+      div.event.filtr-item(data-category='all, planned, development')
+        div.event__tags
+          span.event__tag.planned planned
+          span.event__tag development
+        span.event__title Bulletproofs
+        p.event__description Short non-interactive, zero-knowledge proofs that require no trusted setup. Bulletproofs will enable efficient, confidential transactions, reducing transaction size and increasing speed.
+        //div.event__estimate
+          span.icon.clock
+          span Estimate Q2 2019
+
+      div.event.filtr-item(data-category='all, planned, development')
+        div.event__tags
+          span.event__tag.planned planned
+          span.event__tag development
+        span.event__title Private/Transparent wallet
+        p.event__description A wallet mode designed for transparency (regulation, shared funds), the Zano wallet will be able to operate in either mode. One will work in the same way as Bitcoin; the other will utilize bulletproofs.
+        //div.event__estimate
+          span.icon.clock
+          span Estimate Q2 2019
+
+      div.event.filtr-item(data-category='all, planned, development')
+        div.event__tags
+          span.event__tag.planned planned
+          span.event__tag development
+        span.event__title Voting mechanism
+        p.event__description An alias-based voting system for Zano holders that would allow them to participate in community fund management (unswapped coins).
+        //div.event__estimate
+          span.icon.clock
+          span Estimate Q2 2019
+
+      div.event(data-category='all, planned, r&d')
+        div.event__tags
+          span.event__tag.planned planned
+          span.event__tag r&d
+        span.event__title Messenger
+        p.event__description An alias-based messenger, powered by the Zano blockchain offering a safe, secure, and anonymous way to communicate for Zano users and merchants.
+        //div.event__estimate
+          span.icon.clock
+          span Estimate Q2 2019
+
+      div.event(data-category='all, planned, r&d')
+        div.event__tags
+          span.event__tag.planned planned
+          span.event__tag r&d
+        span.event__title Atomic swaps
+        p.event__description A simple and secure way to covert Zano to another cryptocurrency. This is a way around without going through a third-party service like a crypto exchange.
+        //div.event__estimate
+          span.icon.clock
+          span Estimate Q2 2019
+
+      div.event(data-category='all, planned, r&d')
+        div.event__tags
+          span.event__tag.planned planned
+          span.event__tag r&d
+        span.event__title Sharding
+        p.event__description Sharding is a method of partitioning, spreading out the computational and storage workload across a network so that each node isn't responsible for processing the entire network's transactional load. Instead, each node only maintains information related to its partition or shard.
+        //div.event__estimate
+          span.icon.clock
+          span Estimate Q2 2019
+
+      div.event(data-category='all, planned, development')
+        div.event__tags
+          span.event__tag.planned planned
+          span.event__tag development
+        span.event__title Web API
+        p.event__description Prebuilt plugins for ecommerce engines, Purchase button APIs, and documentation making Zano easy to deploy and use across mainstream ecommerce platforms.
+        //div.event__estimate
+          span.icon.clock
+          span Estimate Q2 2019
+
+      div.event(data-category='all, completed, development')
+        div.event__tags
+          span.event__tag.completed completed
+          span.event__tag development
+        span.event__title ProgPoW implementation
+        p.event__description
+          |A Zano specific ProgPoW implementation with adjusted polymorphic mathematical operations indexes.</br>
+          |More details on the task and motivation could be found in the blog <a href='https://medium.com/@zano_project/zano-proof-of-work-our-motivation-for-using-progpow-8e9693d2a8'>post</a>.
+        //div.event__estimate
+          span.icon.clock
+          span Estimate Q2 2019
