@@ -11,18 +11,18 @@ section.section.roadmap
 
       div.search
         span.search__icon
-        input.search__input(type='search' placeholder='Search')
+        input.search__input(type='search' placeholder='Search' data-search)
 
-      ul.roadmap-menu
-          li.roadmap-menu__el(data-filter='all') all
-          li.roadmap-menu__el(data-filter='progress') in progress
-          li.roadmap-menu__el(data-filter='planned') planned
-          li.roadmap-menu__el(data-filter='completed') completed
-          li.roadmap-menu__el(data-filter='development') development
-          li.roadmap-menu__el(data-filter='r&d') r&d
+      ul.roadmap-menu.filters
+          li.roadmap-menu__el(data-multifilter='all') all
+          li.roadmap-menu__el(data-multifilter='1') in progress
+          li.roadmap-menu__el(data-multifilter='2') planned
+          li.roadmap-menu__el(data-multifilter='3') completed
+          li.roadmap-menu__el(data-multifilter='4') development
+          li.roadmap-menu__el(data-multifilter='5') r&d
 
     div.events.filtr-container
-      div.event(data-category='all, completed, development')
+      div.event.filtr-item(data-category='3, 4')
         div.event__tags
           span.event__tag.completed completed
           span.event__tag development
@@ -34,7 +34,7 @@ section.section.roadmap
           span.icon.clock
           span Estimate Q2 2019
 
-      div.event.filtr-item(data-category='development')
+      div.event.filtr-item(data-category='1, 4')
         div.event__tags
           span.event__tag.progress in progress
           span.event__tag development
@@ -44,7 +44,7 @@ section.section.roadmap
           span.icon.clock
           span Estimate Q2 2019
 
-      div.event.filtr-item(data-category='all, progress, development')
+      div.event.filtr-item(data-category='1, 4')
         div.event__tags
           span.event__tag.progress in progress
           span.event__tag development
@@ -54,7 +54,7 @@ section.section.roadmap
           span.icon.clock
           span Estimate Q2 2019
 
-      div.event.filtr-item(data-category='all, planned, development')
+      div.event.filtr-item(data-category='2, 4')
         div.event__tags
           span.event__tag.planned planned
           span.event__tag development
@@ -64,7 +64,7 @@ section.section.roadmap
           span.icon.clock
           span Estimate Q2 2019
 
-      div.event.filtr-item(data-category='all, planned, development')
+      div.event.filtr-item(data-category='2, 4')
         div.event__tags
           span.event__tag.planned planned
           span.event__tag development
@@ -74,7 +74,7 @@ section.section.roadmap
           span.icon.clock
           span Estimate Q2 2019
 
-      div.event.filtr-item(data-category='all, planned, development')
+      div.event.filtr-item(data-category='2, 4')
         div.event__tags
           span.event__tag.planned planned
           span.event__tag development
@@ -84,7 +84,7 @@ section.section.roadmap
           span.icon.clock
           span Estimate Q2 2019
 
-      div.event.filtr-item(data-category='all, planned, development')
+      div.event.filtr-item(data-category='2, 4')
         div.event__tags
           span.event__tag.planned planned
           span.event__tag development
@@ -94,7 +94,7 @@ section.section.roadmap
           span.icon.clock
           span Estimate Q2 2019
 
-      div.event(data-category='all, planned, r&d')
+      div.event.filtr-item(data-category='2, 5')
         div.event__tags
           span.event__tag.planned planned
           span.event__tag r&d
@@ -104,7 +104,7 @@ section.section.roadmap
           span.icon.clock
           span Estimate Q2 2019
 
-      div.event(data-category='all, planned, r&d')
+      div.event.filtr-item(data-category='2, 5')
         div.event__tags
           span.event__tag.planned planned
           span.event__tag r&d
@@ -114,7 +114,7 @@ section.section.roadmap
           span.icon.clock
           span Estimate Q2 2019
 
-      div.event(data-category='all, planned, r&d')
+      div.event.filtr-item(data-category='2, 5')
         div.event__tags
           span.event__tag.planned planned
           span.event__tag r&d
@@ -124,7 +124,7 @@ section.section.roadmap
           span.icon.clock
           span Estimate Q2 2019
 
-      div.event(data-category='all, planned, development')
+      div.event.filtr-item(data-category='2, 4')
         div.event__tags
           span.event__tag.planned planned
           span.event__tag development

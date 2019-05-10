@@ -21,7 +21,8 @@ const PATH = {
 const common = merge([
   {
     entry: {
-      'index': PATH.source + '/index.js'
+      'index': PATH.source + '/index.js',
+      'roadmap': PATH.source + '/roadmap.js'
     },
 
     output: {
@@ -44,7 +45,7 @@ const common = merge([
       }),
       new HtmlWebpackPlugin({
         filename: 'roadmap.html',
-        chunks: ['index', 'common'],
+        chunks: ['roadmap', 'common'],
         template: PATH.source + '/pages/pages/roadmap.pug'
       }),
       // new CopyWebpackPlugin([{

@@ -234,17 +234,4 @@ $(document).ready(function () {
     $($hamburger).toggleClass('active');
     $($mobileMenu).toggleClass('opened');
   });
-
-  // $('.filtr-container').filterizr({
-  //   animationDuration: 0,
-  //   filterInCss: {
-  //     position: 'relative',
-  //     display: 'inline-block',
-  //     transform: 'unset'
-  //   },
-  //   filterOutCss: {
-  //     display: 'none',
-  //     transform: 'unset'
-  //   }
-  // });
 });

@@ -17,7 +17,7 @@
   gtag('js', new Date());
   gtag('config', 'UA-131341266-1');
 </script>
-  <link href="./css/index.css" rel="stylesheet"></head>
+  <link href="./css/common.css" rel="stylesheet"></head>
   <body>
 <!-- mobile-menu-->
 <div class="mobile-menu" id="mobile-menu">
@@ -49,19 +49,19 @@
     <h2 class="section__title title centred"><span class="title__text">Zano&nbsp;</span><span class="title__text-select">Roadmap</span><span class="title__shadow">Roadmap</span></h2>
     <div class="roadmap-nav">
       <div class="search"><span class="search__icon"></span>
-        <input class="search__input" type="search" placeholder="Search">
+        <input class="search__input" type="search" placeholder="Search" data-search>
       </div>
-      <ul class="roadmap-menu">
-        <li class="roadmap-menu__el" data-filter="all">all</li>
-        <li class="roadmap-menu__el" data-filter="progress">in progress</li>
-        <li class="roadmap-menu__el" data-filter="planned">planned</li>
-        <li class="roadmap-menu__el" data-filter="completed">completed</li>
-        <li class="roadmap-menu__el" data-filter="development">development</li>
-        <li class="roadmap-menu__el" data-filter="r&amp;d">r&d</li>
+      <ul class="roadmap-menu filters">
+        <li class="roadmap-menu__el" data-multifilter="all">all</li>
+        <li class="roadmap-menu__el" data-multifilter="1">in progress</li>
+        <li class="roadmap-menu__el" data-multifilter="2">planned</li>
+        <li class="roadmap-menu__el" data-multifilter="3">completed</li>
+        <li class="roadmap-menu__el" data-multifilter="4">development</li>
+        <li class="roadmap-menu__el" data-multifilter="5">r&d</li>
       </ul>
     </div>
     <div class="events filtr-container">
-      <div class="event" data-category="all, completed, development">
+      <div class="event filtr-item" data-category="3, 4">
         <div class="event__tags"><span class="event__tag completed">completed</span><span class="event__tag">development</span></div><span class="event__title">ProgPoW implementation</span>
         <p class="event__description">
           A Zano specific ProgPoW implementation with adjusted polymorphic mathematical operations indexes.</br>
@@ -73,7 +73,7 @@
         
         -->
       </div>
-      <div class="event filtr-item" data-category="development">
+      <div class="event filtr-item" data-category="1, 4">
         <div class="event__tags"><span class="event__tag progress">in progress</span><span class="event__tag">development</span></div><span class="event__title">Light wallet</span>
         <p class="event__description">A light version of the Zano wallet app that doesn’t require blockchain data to be stored on a local hard drive.</p>
         <!--div.event__estimate
@@ -82,7 +82,7 @@
         
         -->
       </div>
-      <div class="event filtr-item" data-category="all, progress, development">
+      <div class="event filtr-item" data-category="1, 4">
         <div class="event__tags"><span class="event__tag progress">in progress</span><span class="event__tag">development</span></div><span class="event__title">Marketplace</span>
         <p class="event__description">A Decentralized Anonymous Marketplace built on top of the Zano blockchain.</p>
         <!--div.event__estimate
@@ -91,7 +91,7 @@
         
         -->
       </div>
-      <div class="event filtr-item" data-category="all, planned, development">
+      <div class="event filtr-item" data-category="2, 4">
         <div class="event__tags"><span class="event__tag planned">planned</span><span class="event__tag">development</span></div><span class="event__title">Mobile wallet</span>
         <p class="event__description">Native iOS & Android wallet apps.</p>
         <!--div.event__estimate
@@ -100,7 +100,7 @@
         
         -->
       </div>
-      <div class="event filtr-item" data-category="all, planned, development">
+      <div class="event filtr-item" data-category="2, 4">
         <div class="event__tags"><span class="event__tag planned">planned</span><span class="event__tag">development</span></div><span class="event__title">Bulletproofs</span>
         <p class="event__description">Short non-interactive, zero-knowledge proofs that require no trusted setup. Bulletproofs will enable efficient, confidential transactions, reducing transaction size and increasing speed.</p>
         <!--div.event__estimate
@@ -109,7 +109,7 @@
         
         -->
       </div>
-      <div class="event filtr-item" data-category="all, planned, development">
+      <div class="event filtr-item" data-category="2, 4">
         <div class="event__tags"><span class="event__tag planned">planned</span><span class="event__tag">development</span></div><span class="event__title">Private/Transparent wallet</span>
         <p class="event__description">A wallet mode designed for transparency (regulation, shared funds), the Zano wallet will be able to operate in either mode.</p>
         <!--div.event__estimate
@@ -118,7 +118,7 @@
         
         -->
       </div>
-      <div class="event filtr-item" data-category="all, planned, development">
+      <div class="event filtr-item" data-category="2, 4">
         <div class="event__tags"><span class="event__tag planned">planned</span><span class="event__tag">development</span></div><span class="event__title">Voting mechanism</span>
         <p class="event__description">An alias-based voting system for Zano holders that would allow them to participate in community fund management (unswapped coins).</p>
         <!--div.event__estimate
@@ -127,7 +127,7 @@
         
         -->
       </div>
-      <div class="event" data-category="all, planned, r&amp;d">
+      <div class="event filtr-item" data-category="2, 5">
         <div class="event__tags"><span class="event__tag planned">planned</span><span class="event__tag">r&d</span></div><span class="event__title">Messenger</span>
         <p class="event__description">An alias-based messenger, powered by the Zano blockchain offering a safe, secure, and anonymous way to communicate for Zano users and merchants.</p>
         <!--div.event__estimate
@@ -136,7 +136,7 @@
         
         -->
       </div>
-      <div class="event" data-category="all, planned, r&amp;d">
+      <div class="event filtr-item" data-category="2, 5">
         <div class="event__tags"><span class="event__tag planned">planned</span><span class="event__tag">r&d</span></div><span class="event__title">Atomic swaps</span>
         <p class="event__description">A simple and secure way to covert Zano to another cryptocurrency. This is a way around without going through a third-party service like a crypto exchange.</p>
         <!--div.event__estimate
@@ -145,7 +145,7 @@
         
         -->
       </div>
-      <div class="event" data-category="all, planned, r&amp;d">
+      <div class="event filtr-item" data-category="2, 5">
         <div class="event__tags"><span class="event__tag planned">planned</span><span class="event__tag">r&d</span></div><span class="event__title">Sharding</span>
         <p class="event__description">Sharding is a method of partitioning, spreading out the computational and storage workload across a network so that each node isn't responsible for processing the entire network's transactional load. Instead, each node only maintains information related to its partition or shard.</p>
         <!--div.event__estimate
@@ -154,7 +154,7 @@
         
         -->
       </div>
-      <div class="event" data-category="all, planned, development">
+      <div class="event filtr-item" data-category="2, 4">
         <div class="event__tags"><span class="event__tag planned">planned</span><span class="event__tag">development</span></div><span class="event__title">Web API</span>
         <p class="event__description">Prebuilt plugins for ecommerce engines, Purchase button APIs, and documentation making Zano easy to deploy and use across mainstream ecommerce platforms.</p>
         <!--div.event__estimate
@@ -185,5 +185,5 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
-  <script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/index.js"></script></body>
+  <script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/roadmap.js"></script></body>
 </html>
