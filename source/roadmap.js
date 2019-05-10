@@ -17,4 +17,8 @@ $(document).ready(function () {
   $('.roadmap-menu__el').click(function() {
     $(this).toggleClass('active');
   });
+
+  $('.roadmap-menu__el.first').click(function() {
+    $('.roadmap-menu__el').removeClass('active');
+  });
 });

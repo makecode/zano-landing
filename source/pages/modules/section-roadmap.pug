@@ -14,7 +14,7 @@ section.section.roadmap
         input.search__input(type='search' placeholder='Search' data-search)
 
       ul.roadmap-menu.filters
-          li.roadmap-menu__el(data-multifilter='all') all
+          li.roadmap-menu__el.first(data-filter='all') all
           li.roadmap-menu__el(data-multifilter='1') in progress
           li.roadmap-menu__el(data-multifilter='2') planned
           li.roadmap-menu__el(data-multifilter='3') completed
@@ -29,10 +29,20 @@ section.section.roadmap
         span.event__title ProgPoW implementation
         p.event__description
           | A Zano specific ProgPoW implementation with adjusted polymorphic mathematical operations indexes.</br>
-          | More details on the task and motivation could be found in the blog <a href='https://medium.com/@zano_project/zano-proof-of-work-our-motivation-for-using-progpow-8e9693d2a8'>post</a>.
-        //div.event__estimate
+          | More details and motivation in the blog <a href='https://medium.com/@zano_project/zano-proof-of-work-our-motivation-for-using-progpow-8e9693d2a8'>post</a>.
+        div.event__estimate
           span.icon.clock
-          span Estimate Q2 2019
+          span Estimate Q1 2019
+
+      div.event.filtr-item(data-category='1, 4')
+        div.event__tags
+          span.event__tag.progress in progress
+          span.event__tag development
+        span.event__title Zano wallet v2
+        p.event__description Adding the contact list and marketplace offers to the wallet application.
+        div.event__estimate
+          span.icon.clock
+          span Estimate Q3 2019
 
       div.event.filtr-item(data-category='1, 4')
         div.event__tags
@@ -40,9 +50,9 @@ section.section.roadmap
           span.event__tag development
         span.event__title Light wallet
         p.event__description A light version of the Zano wallet app that doesn’t require blockchain data to be stored on a local hard drive.
-        //div.event__estimate
+        div.event__estimate
           span.icon.clock
-          span Estimate Q2 2019
+          span Estimate Q4 2019
 
       div.event.filtr-item(data-category='1, 4')
         div.event__tags
@@ -50,9 +60,9 @@ section.section.roadmap
           span.event__tag development
         span.event__title Marketplace
         p.event__description A Decentralized Anonymous Marketplace built on top of the Zano blockchain.
-        //div.event__estimate
+        div.event__estimate
           span.icon.clock
-          span Estimate Q2 2019
+          span Estimate Q4 2019
 
       div.event.filtr-item(data-category='2, 4')
         div.event__tags
