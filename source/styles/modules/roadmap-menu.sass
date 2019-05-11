@@ -9,6 +9,11 @@
   display: flex
   flex-direction: row
 
+  +m($tablet)
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+
   &__el
     margin-right: 30px
     color: white
@@ -19,6 +24,10 @@
     cursor: pointer
     user-select: none
     transition: $tr
+
+    +m($tablet)
+      margin: 0 10px 20px
+
 
   &__el:last-child
     margin-right: 0
