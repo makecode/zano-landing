@@ -1,0 +1,39 @@
+.downloads
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  justify-content: space-between
+
+  +m($tablet)
+    flex-wrap: wrap
+
+  &__item
+    display: inline-block
+    width: 24.5%
+    padding: 20px
+    border: 1px solid #1d2e6a
+    border-radius: 10px
+    box-sizing: border-box
+
+    +m($tablet)
+      width: 49%
+      margin-bottom: 2%
+
+    +m($mobile)
+      width: 100%
+      margin-bottom: 2%
+
+  &__title
+    margin-bottom: 20px
+    text-transform: uppercase
+    color: white
+
+  &__buttons
+    display: flex
+    flex-direction: row
+
+    .button
+      width: 100%
+
+    .button:nth-child(2)
+      margin: 0 10px

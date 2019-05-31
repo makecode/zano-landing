@@ -1,0 +1,74 @@
+-
+  const downloads = [
+    {
+      icon: 'windows',
+      title: 'windows',
+      links: [
+        { title: 'exe', href: '#' },
+        { title: 'zip', href: '#' },
+        { title: 'pdbs', href: '#' }
+      ]
+    },
+    {
+      icon: 'linux',
+      title: 'linux',
+      links: [
+        { title: 'tar.bz2', href: '#' }
+      ]
+    },
+    {
+      icon: 'mac',
+      title: 'mac',
+      links: [
+        { title: 'dmg', href: '#' }
+      ]
+    },
+    {
+      icon: 'gpu',
+      title: 'gpu',
+      links: [
+        { title: 'cuda', href: '#' },
+        { title: 'opencl', href: '#' },
+        { title: 'cpu', href: '#' }
+      ]
+    },
+  ]
+
+// section downloads
+section.section.downloads
+  div.section__wrap.container
+
+    h2.section__title.title.centred
+      span.title__text Last&nbsp;
+      span.title__text-select Release
+      span.title__shadow Downloads
+
+    p.section__subtitle Zano Desktop Wallet is available on Windows, Mac and Linux. Mining software binaries available for Windows GPU -> Mining software
+
+    div.downloads
+      each item in downloads
+        figure.downloads__item
+          .downloads__icon
+            span.icon
+
+          figcaption
+            h4.downloads__title= item.title
+            div.downloads__buttons
+              each button in item.links
+                a(href= button.href).button= button.title
+
+    div.description
+      h3 Zano Manual
+      p Zano mining is done by specialized computers. The role of miners is to secure the network and to process every Zano transaction. Miners achieve this by solving a computational problem which allows them to chain together blocks of transactions (hence Zano’s famous “blockchain”). For this service, miners are rewarded with newly-created Zano and transaction fees.
+
+      h4 DOWNLOAD THE WALLET
+      p There are many aspects and functions of Zano mining and we'll go over them here. There are four system releases which made for:
+
+      ul
+        li Windows (*.exe, *.zip, *.pdbs)
+        li Linux (*.tar.bz2)
+        li MacOS (*.dmg)
+        li GPU (cuda.exe, opencl.exe, cpu.exe)
+
+      h4 DOWNLOAD THE setup guide
+      p Miners secure the Zano network by making it difficult to attack, alter or stop. The more miners that mine, the more the secure the network. The only way to reverse Zano transactions is to have more than 51% of the network hash power. Distributed hash power spread among many different miners keeps Zano secure and safe. <a href='#'>Download Setup Guide</a>
