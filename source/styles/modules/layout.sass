@@ -77,5 +77,16 @@ main
   height: 340px
   background-image: linear-gradient(to bottom, $footer-bg-top, $footer-bg-bottom)
 
+  +m($mobile)
+    height: auto
+
+    .navigation
+      margin: 40px 0
+      flex-direction: column
+      justify-content: center
+
+    .navigation__link
+      margin: 0 0 20px 0
+
   &__copyright
     font-size: 11px
