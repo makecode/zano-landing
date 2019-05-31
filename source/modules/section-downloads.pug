@@ -25,7 +25,7 @@
     },
     {
       icon: 'gpu',
-      title: 'gpu',
+      title: 'Mining software',
       links: [
         { title: 'cuda', href: '#' },
         { title: 'opencl', href: '#' },
@@ -39,11 +39,10 @@ section.section.downloads
   div.section__wrap.container
 
     h2.section__title.title.centred
-      span.title__text Last&nbsp;
-      span.title__text-select Release
+      span.title__text Downloads
       span.title__shadow Downloads
 
-    p.section__subtitle Zano Desktop Wallet is available on Windows, Mac and Linux. Mining software binaries available for Windows GPU -> Mining software
+    p.section__subtitle Zano Desktop Wallet is available on Windows, Mac and Linux. Mining software binaries available for Windows GPU
 
     div.downloads
       each item in downloads
@@ -55,20 +54,12 @@ section.section.downloads
             h4.downloads__title= item.title
             div.downloads__buttons
               each button in item.links
-                a(href= button.href).button= button.title
+                a(href= button.href).button.blue
+                  span.button__text= button.title
 
     div.description
-      h3 Zano Manual
-      p Zano mining is done by specialized computers. The role of miners is to secure the network and to process every Zano transaction. Miners achieve this by solving a computational problem which allows them to chain together blocks of transactions (hence Zano’s famous “blockchain”). For this service, miners are rewarded with newly-created Zano and transaction fees.
+      h4 Zano wallet
+      p Please refer to this article to learn how install and create the <a href='https://docs.zano.org/docs/getting-started-1'>wallet</a> using Zano Desktop app. Zano is an open source project with code on available on <a href='https://github.com/hyle-team/zano/releases'>Github</a>. When you download Zano Wallet, you may want to verify its <a href='https://docs.zano.org/docs/how-to-verify-binaries-authenticity'>authenticity</a> to make sure that you downloaded the correct one from the Hyle Team GitHub repository. More information can be found on <a href='https://docs.zano.org'>resources page</a>
 
-      h4 DOWNLOAD THE WALLET
-      p There are many aspects and functions of Zano mining and we'll go over them here. There are four system releases which made for:
-
-      ul
-        li Windows (*.exe, *.zip, *.pdbs)
-        li Linux (*.tar.bz2)
-        li MacOS (*.dmg)
-        li GPU (cuda.exe, opencl.exe, cpu.exe)
-
-      h4 DOWNLOAD THE setup guide
-      p Miners secure the Zano network by making it difficult to attack, alter or stop. The more miners that mine, the more the secure the network. The only way to reverse Zano transactions is to have more than 51% of the network hash power. Distributed hash power spread among many different miners keeps Zano secure and safe. <a href='#'>Download Setup Guide</a>
+      h4 Mining software
+      p Mining software available for both CPU and GPU, with CUDA and OpenCL implementation. Source code is on <a href='https://github.com/hyle-team/zano/releases'>Github</a>. Apart from that Zano daemon features internal stratum-like server that can host miner clients via ethProxy protocol. How to solo <a href='https://docs.zano.org/docs/mining-guide'>mine guide</a> is available on <a href='https://docs.zano.org'>resources page</a>
