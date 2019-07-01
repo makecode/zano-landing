@@ -18,7 +18,7 @@
   gtag('config', 'UA-131341266-1');
 </script>
   <link href="./css/common.css" rel="stylesheet"></head>
-  <body class="downloads-page">
+  <body>
 <!-- mobile-menu-->
 <div class="mobile-menu" id="mobile-menu">
 <nav class="navigation"><a class="navigation__link" href="https://medium.com/@zano_project" aria-label="blog">blog</a><a class="navigation__link" href="team.html" aria-label="team" target="_self">team</a><a class="navigation__link" href="roadmap.html" aria-label="roadmap" target="_self">roadmap</a><a class="navigation__link" href="downloads.html" aria-label="downloads" target="_self">downloads</a><a class="navigation__link" href="https://docs.zano.org/" aria-label="resources">resources</a><a class="navigation__link" href="https://explorer.zano.org" aria-label="resources">explorer</a></nav>
@@ -41,51 +41,81 @@
 </header>
     <!-- main-->
     <main class="main" id="main">
-<!-- section downloads-->
-<section class="section downloads">
+<!-- section roadmap-->
+<section class="section team">
   <div class="section__wrap container">
-    <h2 class="section__title title centred"><span class="title__text">Downloads</span><span class="title__shadow">Downloads</span></h2>
-    <p class="section__subtitle">Zano Desktop Wallet is available on Windows, Mac and Linux. Mining software binaries available for Windows GPU</p>
-    <div class="downloads">
-      <figure class="downloads__item">
-        <div class="downloads__icon"><span class="icon windows"></span></div>
-        <figcaption>
-          <h4 class="downloads__title">windows</h4>
-          <div class="downloads__buttons"><a class="button blue" href="https://zano.org/downloads/zano-win-setup.exe"><span class="button__text">exe</span></a><a class="button blue" href="https://zano.org/downloads/zano-win.zip"><span class="button__text">zip</span></a>
+    <h2 class="section__title title centred"><span class="title__text">Our</span><span class="title__text-select">Team</span><span class="title__shadow">Team</span>
+    </h2>
+    <ul class="team-list">
+      <li class="team-list__el">
+        <div class="teammate">
+          <div class="teammate__picture">
           </div>
-        </figcaption>
-      </figure>
-      <figure class="downloads__item">
-        <div class="downloads__icon"><span class="icon linux"></span></div>
-        <figcaption>
-          <h4 class="downloads__title">linux</h4>
-          <div class="downloads__buttons"><a class="button blue" href="https://zano.org/downloads/zano-linux-x64.tar.bz2"><span class="button__text">tar.bz2</span></a>
+          <div class="teammate__name">Andrey Sabelnikov</div>
+          <div class="teammate__position">Co-founder &amp; Core Dev</div>
+        </div>
+      </li>
+      <li class="team-list__el">
+        <div class="teammate">
+          <div class="teammate__picture">
           </div>
-        </figcaption>
-      </figure>
-      <figure class="downloads__item">
-        <div class="downloads__icon"><span class="icon mac"></span></div>
-        <figcaption>
-          <h4 class="downloads__title">mac</h4>
-          <div class="downloads__buttons"><a class="button blue" href="https://zano.org/downloads/zano-macos-x64.dmg"><span class="button__text">dmg</span></a>
+          <div class="teammate__name">Pavel Ravaga</div>
+          <div class="teammate__position">Co-founder &amp; Product owner</div>
+        </div>
+      </li>
+      <li class="team-list__el">
+        <div class="teammate">
+          <div class="teammate__picture">
           </div>
-        </figcaption>
-      </figure>
-      <figure class="downloads__item">
-        <div class="downloads__icon"><span class="icon gpu"></span></div>
-        <figcaption>
-          <h4 class="downloads__title">Mining software</h4>
-          <div class="downloads__buttons"><a class="button blue" href="https://zano.org/downloads/progminer-zano-cuda.exe"><span class="button__text">cuda</span></a><a class="button blue" href="https://zano.org/downloads/progminer-zano-opencl.exe"><span class="button__text">opencl</span></a><a class="button blue" href="https://zano.org/downloads/progminer-zano-cpu.exe"><span class="button__text">cpu</span></a>
+          <div class="teammate__name">Valeriy Pisarkov</div>
+          <div class="teammate__position">Core Dev</div>
+        </div>
+      </li>
+      <li class="team-list__el">
+        <div class="teammate">
+          <div class="teammate__picture">
           </div>
-        </figcaption>
-      </figure>
-    </div>
-    <div class="description">
-      <h4>Zano wallet</h4>
-      <p>Please refer to this article to learn how install and create the <a href='https://docs.zano.org/docs/getting-started-1'>wallet</a> using Zano Desktop app. Zano is an open source project with code on available on <a href='https://github.com/hyle-team/zano/releases'>Github</a>. When you download Zano Wallet, you may want to verify its <a href='https://docs.zano.org/docs/how-to-verify-binaries-authenticity'>authenticity</a> to make sure that you downloaded the correct one from the Hyle Team GitHub repository. More information can be found on <a href='https://docs.zano.org'>resources page</a></p>
-      <h4>Mining software</h4>
-      <p>Mining software available for both CPU and GPU, with CUDA and OpenCL implementation. Source code is on <a href='https://github.com/hyle-team/zano/releases'>Github</a>. Apart from that Zano daemon features internal stratum-like server that can host miner clients via ethProxy protocol. How to solo <a href='https://docs.zano.org/docs/mining-guide'>mine guide</a> is available on <a href='https://docs.zano.org'>resources page</a></p>
-    </div>
+          <div class="teammate__name">Alex Bobylev</div>
+          <div class="teammate__position">Senior Analyst</div>
+        </div>
+      </li>
+      <li class="team-list__el">
+        <div class="teammate">
+          <div class="teammate__picture">
+          </div>
+          <div class="teammate__name">Casey Milone</div>
+          <div class="teammate__position">Messaging &amp; Coms</div>
+        </div>
+      </li>
+      <li class="team-list__el">
+        <div class="teammate">
+          <div class="teammate__picture">
+          </div>
+          <div class="teammate__name">Jed Thorne</div>
+          <div class="teammate__position">Community manager</div>
+        </div>
+      </li>
+    </ul>
+    <h2 class="section__title title centred"><span class="title__text">Advisors</span><span class="title__shadow">Advisors</span>
+    </h2>
+    <ul class="team-list">
+      <li class="team-list__el">
+        <div class="teammate">
+          <div class="teammate__picture">
+          </div>
+          <div class="teammate__name">Tyler Spadling</div>
+          <div class="teammate__position">Flexa</div>
+        </div>
+      </li>
+      <li class="team-list__el">
+        <div class="teammate">
+          <div class="teammate__picture">
+          </div>
+          <div class="teammate__name">Sam Trautwein</div>
+          <div class="teammate__position">Carbon</div>
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
     </main>
@@ -107,5 +137,5 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
-  <script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/downloads.js"></script></body>
+  <script type="text/javascript" src="js/common.js"></script><script type="text/javascript" src="js/team.js"></script></body>
 </html>

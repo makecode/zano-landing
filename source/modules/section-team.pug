@@ -1,0 +1,88 @@
+-
+  const teams = [
+    {
+      title: [
+        { text: 'Our' },
+        { text: 'Team', selected: true },
+        { text: 'Team', shadow: true }
+      ],
+      members: [
+        {
+          picture: '',
+          name: 'Andrey Sabelnikov',
+          position: 'Co-founder & Core Dev'
+        },
+        {
+          picture: '',
+          name: 'Pavel Ravaga',
+          position: 'Co-founder & Product owner'
+        },
+        {
+          picture: '',
+          name: 'Valeriy Pisarkov',
+          position: 'Core Dev'
+        },
+        {
+          picture: '',
+          name: 'Alex Bobylev',
+          position: 'Senior Analyst'
+        },
+        {
+          picture: '',
+          name: 'Casey Milone',
+          position: 'Messaging & Coms'
+        },
+        {
+          picture: '',
+          name: 'Jed Thorne',
+          position: 'Community manager'
+        },
+      ]
+    },
+    {
+      title: [
+        { text: 'Advisors' },
+        { text: 'Advisors', shadow: true }
+      ],
+      members: [
+        {
+          picture: '',
+          name: 'Tyler Spadling',
+          position: 'Flexa'
+        },
+        {
+          picture: '',
+          name: 'Sam Trautwein',
+          position: 'Carbon'
+        },
+      ]
+    }
+  ]
+
+// section roadmap
+section.section.team
+  div.section__wrap.container
+
+    each team in teams
+
+      h2.section__title.title.centred
+
+        each word in team.title
+          if !word.selected && !word.shadow
+            span.title__text=word.text
+          if word.shadow
+            span.title__shadow=word.text
+          if word.selected
+            span.title__text-select=word.text
+
+      ul.team-list
+
+        each teammate in team.members
+
+          li.team-list__el
+            div.teammate
+              div.teammate__picture
+                if teammate.picture
+                  img.teammate__img(src=teammate.picture).teammate__pic
+              div.teammate__name=teammate.name
+              div.teammate__position=teammate.position

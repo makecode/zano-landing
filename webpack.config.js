@@ -23,7 +23,8 @@ const common = merge([
     entry: {
       'index': PATH.source + '/index.js',
       'roadmap': PATH.source + '/roadmap.js',
-      'downloads': PATH.source + '/downloads.js'
+      'downloads': PATH.source + '/downloads.js',
+      'team': PATH.source + '/team.js'
     },
 
     output: {
@@ -53,6 +54,11 @@ const common = merge([
         filename: 'downloads.html',
         chunks: ['downloads', 'common'],
         template: PATH.source + '/pages/downloads.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'team.html',
+        chunks: ['team', 'common'],
+        template: PATH.source + '/pages/team.pug'
       }),
       // new CopyWebpackPlugin([{
       // from: './locales/**/*',
