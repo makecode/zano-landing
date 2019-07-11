@@ -8,34 +8,44 @@
       ],
       members: [
         {
-          picture: '',
+          picture: 'team_1_1.png',
           name: 'Andrey Sabelnikov',
           position: 'Co-founder & Core Dev'
         },
         {
-          picture: '',
-          name: 'Pavel Ravaga',
+          picture: 'team_1_2.png',
+          name: 'Pavel Nikienkov',
           position: 'Co-founder & Product owner'
         },
         {
-          picture: '',
+          picture: 'team_1_3.png',
           name: 'Valeriy Pisarkov',
           position: 'Core Dev'
         },
         {
-          picture: '',
+          picture: 'team_1_4.png',
           name: 'Alex Bobylev',
           position: 'Senior Analyst'
         },
         {
-          picture: '',
+          picture: 'team_1_5.png',
           name: 'Casey Milone',
           position: 'Messaging & Coms'
         },
         {
-          picture: '',
+          picture: 'team_1_6.png',
           name: 'Jed Thorne',
           position: 'Community manager'
+        },
+        {
+          picture: 'team_1_7.png',
+          name: 'Artem Tutlenko',
+          position: 'Designer'
+        },
+        {
+          picture: '',
+          name: 'Artem Andreevsky',
+          position: 'QA'
         },
       ]
     },
@@ -83,6 +93,6 @@ section.section.team
             div.teammate
               div.teammate__picture
                 if teammate.picture
-                  img.teammate__img(src=teammate.picture).teammate__pic
+                  img.teammate__img(src=require(`../media/${teammate.picture}`)).teammate__pic
               div.teammate__name=teammate.name
               div.teammate__position=teammate.position
