@@ -24,7 +24,10 @@ const common = merge([
       'index': PATH.source + '/index.js',
       'roadmap': PATH.source + '/roadmap.js',
       'downloads': PATH.source + '/downloads.js',
-      'team': PATH.source + '/team.js'
+      'team': PATH.source + '/team.js',
+      'terms-of-use': PATH.source + '/terms-of-use.js',
+      'privacy-policy': PATH.source + '/privacy-policy.js',
+      'cookie-policy': PATH.source + '/cookie-policy.js'
     },
 
     output: {
@@ -59,6 +62,21 @@ const common = merge([
         filename: 'team.html',
         chunks: ['team', 'common'],
         template: PATH.source + '/pages/team.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'terms-of-use.html',
+        chunks: ['terms-of-use', 'common'],
+        template: PATH.source + '/pages/terms-of-use.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'privacy-policy.html',
+        chunks: ['privacy-policy', 'common'],
+        template: PATH.source + '/pages/privacy-policy.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'cookie-policy.html',
+        chunks: ['cookie-policy', 'common'],
+        template: PATH.source + '/pages/cookie-policy.pug'
       }),
       // new CopyWebpackPlugin([{
       // from: './locales/**/*',

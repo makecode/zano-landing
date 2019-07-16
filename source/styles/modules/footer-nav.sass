@@ -1,0 +1,39 @@
+.footer-nav
+  margin: 50px 0
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  justify-content: center
+
+  +m($mobile)
+    padding: 0 20px
+    flex-wrap: wrap
+    justify-content: space-around
+
+  &__section
+    margin: 0 40px
+    text-align: left
+
+    +m($mobile)
+      margin: 0 0 30px
+      width: 50%
+
+
+  &__title
+    color: white
+    font-size: 13px
+    letter-spacing: 1.2px
+
+  &__el
+    margin-top: 14px
+
+  &__link
+    color: $text-main
+    letter-spacing: 0!important
+    font-weight: 400!important
+    text-transform: capitalize!important
+    margin: 0!important
+
+  &__link.disabled
+    opacity: 0.5
+    pointer-events: none
