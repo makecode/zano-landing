@@ -3,35 +3,35 @@
     {
       title: 'ZANO.ORG',
       links: [
-        { title: 'Main website',      link: 'https://zano.org'                                              },
-        { title: 'Coinswap',          link: 'https://coinswap.zano.org'                                     },
-        { title: 'Marketplace',       link: '#',                                            disabled: true  }
+        { title: 'Main website',      link: '/',                                             target: '_self'                             },
+        { title: 'Coinswap',          link: 'https://coinswap.zano.org'                                                                  },
+        { title: 'Marketplace',       link: '#',                                                                          disabled: true }
       ]
-      },
-      {
+    },
+    {
       title: 'ABOUT',
       links: [
-        { title: 'Blog',              link: 'https://medium.com/@zano_project'                              },
-        { title: 'Team',              link: 'https://zano.org/team.html'                                    },
-        { title: 'Contacts',          link: '#',                                            disabled: true  }
+        { title: 'Blog',              link: 'https://medium.com/@zano_project'                                                           },
+        { title: 'Team',              link: '/team.html',                                   target: '_self'                              },
+        { title: 'Contacts',          link: '#',                                                                          disabled: true }
       ]
-      },
-      {
+    },
+    {
       title: 'RESOURCES',
       links: [
-        { title: 'Downloads',         link: 'https://zano.org/downloads.html'                               },
-        { title: 'Roadmap',           link: 'https://zano.org/roadmap.html'                                 },
-        { title: 'Documentation',     link: 'https://docs.zano.org/',                                       },
-        { title: 'Explorer',          link: 'https://explorer.zano.org/',                                   },
-        { title: 'Specifications',    link: 'https://docs.zano.org/docs/specifications',                    }
+        { title: 'Downloads',         link: '/downloads.html',                              target: '_self'                               },
+        { title: 'Roadmap',           link: '/roadmap.html',                                target: '_self'                               },
+        { title: 'Documentation',     link: 'https://docs.zano.org/',                                                                     },
+        { title: 'Explorer',          link: 'https://explorer.zano.org/',                                                                 },
+        { title: 'Specifications',    link: 'https://docs.zano.org/docs/specifications'                                                   }
       ]
-      },
-      {
+    },
+    {
       title: 'LEGAL',
       links: [
-        { title: 'Terms of use',      link: '/terms-of-use.html',                                           },
-        { title: 'Privacy Policy',    link: '/privacy-policy.html',                                         },
-        { title: 'Cookie Policy',     link: '/cookie-policy.html',                                          }
+        { title: 'Terms of use',      link: '/terms-of-use.html',                           target: '_self'                               },
+        { title: 'Privacy Policy',    link: '/privacy-policy.html',                         target: '_self'                               },
+        { title: 'Cookie Policy',     link: '/cookie-policy.html',                          target: '_self'                               }
       ]
     }
   ];
@@ -43,4 +43,4 @@ div.footer-nav
       ul.footer-nav__list
         each link in section.links
           li.footer-nav__el
-            a.footer-nav__link.navigation__link(class=link.disabled && 'disabled' href= link.link)= link.title
+            a.footer-nav__link.navigation__link(class=link.disabled && 'disabled' href= link.link target= link.target)= link.title
