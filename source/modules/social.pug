@@ -1,13 +1,13 @@
+-
+  const socials = [
+    { title: 'twitter',           link: 'https://twitter.com/zano_project' },
+    { title: 'medium',            link: 'https://medium.com/@zano_project' },
+    { title: 'discord',           link: 'https://discord.gg/wE3rmYY' },
+    { title: 'telegram',          link: 'https://t.me/zanocoin' }
+  ]
+
 ul.social
-  li.social__el
-    a.social__link(href='https://twitter.com/zano_project' title='twitter')
-      span(class='icon twitter')
-  li.social__el
-    a.social__link(href='https://medium.com/@zano_project' title='medium')
-      span(class='icon medium')
-  li.social__el
-    a.social__link(href='https://discord.gg/wE3rmYY' title='discord')
-      span(class='icon discord')
-  li.social__el
-    a.social__link(href='https://t.me/zanocoin' title='telegram')
-      span(class='icon telegram')
+  each social in socials
+    li.social__el
+      a.social__link(href= social.link title= social.title)
+        span.icon(class= social.title)

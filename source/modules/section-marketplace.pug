@@ -1,0 +1,66 @@
+-
+  const featuresList = [
+    { 
+      icon: 'decentralized',
+      title: 'Decentralized',
+      text: 'Listings are stored on the blockchain with no single point of failure it’s censorship resistant.'
+    },
+    { 
+      icon: 'private',
+      title: 'Private',
+      text: 'The Zano blockchain utilizes Ring CT and stealth addresses to ensure buyers and sellers anonymity.'
+    },
+    { 
+      icon: 'trustless',
+      title: 'Trustless',
+      text: 'Zano Escrow Contracts allow both sides to enter an escrowed deal, using customizable collateral without involving 3rd party.'
+    },
+    { 
+      icon: 'customizable',
+      title: 'Customizable',
+      text: 'Marketplace code is easily customizable to fit any  business needs. Take a look at the Use cases to learn more.'
+    },
+    { 
+      icon: 'secure',
+      title: 'Secure',
+      text: 'The Zano blockchain uses Hybrid PoW/PoS.'
+    }
+  ];
+
+section.section.marketplace
+  div.section__wrap.container
+
+    div.block
+      h1.section__title.title.centred
+        span.title__text Zano
+        span.title__text.title__text-select Marketplace
+        span.title__shadow Marketplace
+
+      p.video-description The Zano Marketplace Platform allows any user to run their own decentralized marketplace, meeting any business needs. It’s secure, censorship-resistant, and requires only basic web dev skills to operate. <br/>The Zano daemon handles all the blockchain work.
+
+      div.video-container
+        div.video
+
+
+
+    div.block
+      h1.section__title.title.centred
+        span.title__text Features
+        span.title__shadow Features
+
+      ul.marketplace-features
+        each feature in featuresList
+          li.marketplace-feature
+            span.marketplace-feature__icon.icon(class=feature.icon)
+            h5.marketplace-feature__title= feature.title
+            p.marketplace-feature__text= feature.text
+
+    div.block
+      h1.section__title.title.centred
+        span.title__text Use
+        span.title__text.title__text-select Cases
+        span.title__shadow Cases
+
+      div.comming-soon
+        img(src=require('../media/blurred.png'), alt="Blurred images")
+        span Comming soon ...

@@ -27,7 +27,8 @@ const common = merge([
       'team': PATH.source + '/team.js',
       'terms-of-use': PATH.source + '/terms-of-use.js',
       'privacy-policy': PATH.source + '/privacy-policy.js',
-      'cookie-policy': PATH.source + '/cookie-policy.js'
+      'cookie-policy': PATH.source + '/cookie-policy.js',
+      'marketplace': PATH.source + '/marketplace.js'
     },
 
     output: {
@@ -77,6 +78,11 @@ const common = merge([
         filename: 'cookie-policy.html',
         chunks: ['cookie-policy', 'common'],
         template: PATH.source + '/pages/cookie-policy.pug'
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'marketplace.html',
+        chunks: ['marketplace', 'common'],
+        template: PATH.source + '/pages/marketplace.pug'
       }),
       // new CopyWebpackPlugin([{
       // from: './locales/**/*',

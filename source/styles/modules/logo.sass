@@ -11,16 +11,24 @@
     height: 50px
     transition: transform 1s ease-in-out
 
-  &__title
+  &__text
     margin-left: 14px
     text-transform: uppercase
+    text-align: left
     font-weight: 700
     font-size: 12px
     letter-spacing: 1px
     color: $text-controls
+    line-height: 1.6
 
     +m($tablet)
       display: none
+
+  &__word
+    display: block
+
+  &__word:nth-child(2)
+    color: #7cabee  
 
 .logo:hover .logo__img
   transform: rotateY(180deg)

@@ -1,0 +1,28 @@
+.marketplace-features
+  position: relative
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center
+
+.marketplace-feature
+  display: inline-block
+  width: 31%
+  margin-right: 2.5%
+  margin-bottom: 50px
+
+  &:nth-child(3n)
+    margin-right: 0
+
+  +m($mobile)
+    width: 100%
+    margin-right: 
+
+  &__title
+    display: block
+    margin: 14px 0
+    font-size: 20px
+    color: white
+
+  &__text
+    line-height: 1.6

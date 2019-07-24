@@ -1,11 +1,16 @@
 $shadowColor: #2a3676
 
 .title
+  display: block
   position: relative
 
   &__text
+    margin-right: 6px
     position: relative
     z-index: 2
+
+  &__text:last-child
+    margin-right: 0
 
   &__text-select
     position: relative
@@ -30,6 +35,10 @@ $shadowColor: #2a3676
       font-size: 70px
       bottom: 14px
 
-  &.centred .title__shadow
-    left: 50%
-    transform: translateX(-50%)
+  &.centred
+    text-align: center
+
+    .title__shadow
+      left: 50%
+      transform: translateX(-50%)
+      text-align: center

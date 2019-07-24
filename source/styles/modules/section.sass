@@ -17,7 +17,6 @@
   // HERO
   &.hero
     padding: 0
-    text-align: center
     background-image: url('~media/bg-1.svg')
     background-position: center bottom
 
@@ -89,7 +88,6 @@
 
   // SECTION PRIVACY
   &.privacy
-    text-align: center
     background-image: url('~media/bg-3.svg')
     background-position: center bottom
 
@@ -115,7 +113,6 @@
   // SECTION ECOMMERCE
   &.ecommerce
     display: block
-    text-align: center
     padding-bottom: 0
     background-image: url('~media/bg-4.svg')
     background-position: center
@@ -179,13 +176,11 @@
   &.resources
     background-image: url('~media/bg-6.svg')
     background-position: center
-    text-align: center
 
   // SECTION ROADMAP
   &.roadmap
     padding-top: 0
     padding-bottom: 300px
-    text-align: center
     background-image: url('~media/mountain-bg.svg')
     background-position: bottom center
 
@@ -197,7 +192,6 @@
   // SECTION DOWNLOADS
   &.downloads
     padding-top: 0
-    text-align: center
 
     .downloads
       margin-top: 50px
@@ -224,14 +218,9 @@
   &.team
     background-image: url('~media/roadmap-stars.svg')
     background-repeat: repeat
-    text-align: center
 
   &.text
     padding-top: 0
-  
-    .title
-      display: block
-      text-align: center
 
     h4
       font-size: 16px
@@ -239,3 +228,36 @@
 
     p
       margin: 14px 0
+
+  // SECTION MARKETPLACE
+  &.marketplace
+    padding-top: 0
+    text-align: center
+
+    .block
+      padding: 50px
+
+    .title
+      display: block
+    
+    .video-container
+      display: inline-block
+      margin: 0 auto
+      max-width: 800px
+      width: 100%
+
+    .comming-soon
+      position: relative
+
+      span
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50px)
+        font-size: 40px
+        font-weight: 300
+        color: white
+
+        +m($mobile)
+          transform: translate(-50%, -20px)
+          font-size: 20px
